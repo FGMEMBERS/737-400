@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>Flaps.ac</path>
+ 
+<animation>
+<type>material</type> 
+<object-name>box</object-name>
+<emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+	    <factor-prop>/controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+<type>material</type> 
+<object-name>box1</object-name>
+<emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+	    <factor-prop>/controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+  <type>material</type>
+  <object-name>LE FLAPS11</object-name>
+  <object-name>EXT11</object-name>
+  <object-name>LE FLAPS22</object-name>
+  <object-name>EXT22</object-name>
+  <object-name>LE FLAPS33</object-name>
+  <object-name>EXT33</object-name>
+  <object-name>LE FLAPS44</object-name>
+  <object-name>EXT44</object-name>
+  <object-name>LE FLAPS55</object-name>
+  <object-name>EXT55</object-name>
+  <object-name>LE FLAPS66</object-name>
+  <object-name>EXT66</object-name>
+  <object-name>LE FLAPS77</object-name>
+  <object-name>EXT77</object-name>
+  <object-name>LE FLAPS88</object-name>
+  <object-name>EXT88</object-name>
+ <emission>
+     <red>0</red>
+     <green>5.0</green>
+     <blue>0</blue>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+</emission> 
+</animation>  
+
+<animation>
+  <type>material</type>
+  <object-name>LE FLAPS1</object-name>
+  <object-name>TRANSIT1</object-name>
+  <object-name>LE FLAPS2</object-name>
+  <object-name>TRANSIT2</object-name>
+  <object-name>LE FLAPS3</object-name>
+  <object-name>TRANSIT3</object-name>
+  <object-name>LE FLAPS4</object-name>
+  <object-name>TRANSIT4</object-name>
+  <object-name>LE FLAPS5</object-name>
+  <object-name>TRANSIT5</object-name>
+  <object-name>LE FLAPS6</object-name>
+  <object-name>TRANSIT6</object-name>
+  <object-name>LE FLAPS7</object-name>
+  <object-name>TRANSIT7</object-name>
+  <object-name>LE FLAPS8</object-name>
+  <object-name>TRANSIT8</object-name>
+ <emission>
+     <red>1.0</red>
+     <green>0.467</green>
+     <blue>0</blue>
+    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+</emission> 
+</animation>  
+
+<!-- Transit -->
+
+<animation>
+<type>select</type>
+<object-name>LE FLAPS1</object-name>
+<object-name>TRANSIT1</object-name>
+         <condition>
+                   <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+<and>
+  <not>
+  <or>
+  <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0</value>
+  </equals>
+  <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.125</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.250</value>
+  </equals>
+   <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.375</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.500</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.625</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.750</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.875</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>1</value>
+  </equals>
+  </or>
+  </not>
+   	        </and>
+	 </condition>
+ </animation>
+
+<!-- EXT -->
+
+<animation>
+	 <type>select</type>
+	 <object-name>LE FLAPS11</object-name>
+       <object-name>EXT11</object-name>
+	   <condition>
+	   <and>
+  <or>
+  <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.125</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.250</value>
+  </equals>
+   <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.375</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.500</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.625</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.750</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>0.875</value>
+  </equals>
+    <equals>
+  <property>/surface-positions/flap-pos-norm</property>
+  <value>1</value>
+  </equals>
+  </or>
+   	        </and>
+	 </condition>
+ </animation>
+
+<!-- LoD -->
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>1000</max-m>
+</animation>
+
+</PropertyList>

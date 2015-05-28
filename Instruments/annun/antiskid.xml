@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>antiskid.ac</path>
+ 
+<animation>
+<type>material</type> 
+<object-name>box</object-name>
+<object-name>rect</object-name>
+<object-name>ANTI SKID</object-name>
+<object-name>INOP</object-name>
+<object-name>knob</object-name>
+<emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+	    <factor-prop>/controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+        <type>material</type>
+        <object-name>ANTI SKID1</object-name>
+        <object-name>ON</object-name>
+        <object-name>OFF</object-name>
+       <emission>
+            <red>0.035</red>
+            <green>0.012</green>
+            <blue>0.007</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+       </emission>
+ </animation>
+
+<animation>
+  <type>material</type>
+  <object-name>ANTI SKID_on</object-name>
+  <object-name>INOP_on</object-name>
+  <emission>
+     <red>5.0</red>
+     <green>0</green>
+     <blue>0</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>  
+
+<animation>
+	 <type>select</type>
+       <object-name>ANTI SKID_on</object-name>
+       <object-name>INOP_on</object-name>
+     <condition>
+      <equals>
+       <property>/controls/gear/antiskid</property>
+       <value>false</value>
+      </equals>
+     </condition>
+ </animation>
+
+<!-- LoD -->
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>1000</max-m>
+</animation>
+
+</PropertyList>

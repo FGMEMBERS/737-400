@@ -1,0 +1,988 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+
+<PropertyList>
+
+ <name>B737-400 Hotspost</name>
+ <background>Aircraft/737-400/Panels/transparent-bg.png</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>0</y-offset>
+
+ <instruments>
+
+  <instrument>
+   <name>Panel Control</name>
+      <x>0</x>
+      <y>0</y>
+          <w>1024</w>
+          <h>1024</h>
+   <w-base>1024</w-base>
+   <h-base>1024</h-base>
+
+
+ <layers>
+  <layer>
+   <name>background</name>
+   <texture>
+     
+     <path>Aircraft/737-400/Panels/transparent-bg.png</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+   </texture>
+  </layer>
+ </layers>
+
+<!-- define hotspot actions below -->
+
+ <actions>
+
+<!-- Gear -->
+
+ <action>
+     <name>Gear Up</name>
+     <button>0</button>
+     <x>500</x>
+     <y>280</y>
+     <w>12</w>
+     <h>30</h>
+  <binding>
+   <command>nasal</command>
+   <script>controls.gearDown(-1)</script>
+  </binding>
+  <mod-up>
+   <binding>
+    <command>nasal</command>
+    <script>controls.gearDown(0)</script>
+   </binding>
+  </mod-up>
+   </action>
+
+   <action>
+     <name>Gear Down</name>
+     <button>0</button>
+     <x>500</x>
+     <y>250</y>
+     <w>12</w>
+     <h>30</h>
+  <binding>
+   <command>nasal</command>
+   <script>controls.gearDown(1)</script>
+  </binding>
+  <mod-up>
+   <binding>
+    <command>nasal</command>
+    <script>controls.gearDown(0)</script>
+   </binding>
+  </mod-up>
+   </action>
+
+<!-- Altimeter -->
+
+ <action>
+   <name>calibrate fine</name>
+   <button>0</button>
+   <x>308</x>
+   <y>282</y>
+   <w>8</w>
+   <h>5</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg</property>
+    <step>-0.01</step>
+    <min>26.0</min>
+    <max>33.0</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>calibrate coarse</name>
+   <button>1</button>
+   <x>308</x>
+   <y>282</y>
+   <w>8</w>
+   <h>5</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg</property>
+    <step>-0.1</step>
+    <min>26.0</min>
+    <max>33.0</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>calibrate fine</name>
+   <button>0</button>
+   <x>316</x>
+   <y>282</y>
+   <w>8</w>
+   <h>5</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg</property>
+    <step>0.01</step>
+    <min>26.0</min>
+    <max>33.0</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>calibrate coarse</name>
+   <button>1</button>
+   <x>316</x>
+   <y>282</y>
+   <w>8</w>
+   <h>5</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/altimeter/setting-inhg</property>
+    <step>0.1</step>
+    <min>26.0</min>
+    <max>33.0</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+     
+ <!-- clock  -->
+
+  <action>
+   <name>adjust left fine</name>
+   <button>0</button>
+   <x>108</x>
+   <y>264</y>
+   <w>8</w>
+   <h>5</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/clock/offset-sec</property>
+    <step>-60</step>
+    <min>0</min>
+    <max>43200</max>
+    <wrap>true</wrap>
+   </binding>
+  </action>
+  
+  <action>
+   <name>adjust left coarse</name>
+   <button>1</button>
+   <x>108</x>
+   <y>264</y>
+   <w>8</w>
+   <h>5</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/clock/offset-sec</property>
+    <step>-900</step>
+    <min>0</min>
+    <max>43200</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>adjust right fine</name>
+   <button>0</button>
+   <x>116</x>
+   <y>264</y>
+   <w>8</w>
+   <h>5</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/clock/offset-sec</property>
+    <step>60</step>
+    <min>0</min>
+    <max>43200</max>
+    <wrap>true</wrap>
+   </binding>
+  </action>
+  
+  <action>
+   <name>adjust right coarse</name>
+   <button>1</button>
+   <x>116</x>
+   <y>264</y>
+   <w>8</w>
+   <h>5</h>
+   <binding>
+    <command>property-adjust</command>
+    <property>/instrumentation/clock/offset-sec</property>
+    <step>900</step>
+    <min>0</min>
+    <max>43200</max>
+    <wrap>1</wrap>
+   </binding>
+  </action>
+
+<!-- MCP -->
+
+ <action>
+    <name>VNAV</name>
+    <button>0</button>
+    <x>358</x>
+    <y>392</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/altitude</property>
+    <value>altitude-hold</value>
+  </binding>
+    <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/vnav</property>
+    <value>1</value>
+  </binding>
+ </action>
+
+<action>
+    <name>VNAV Off</name>
+    <button>0</button>
+    <x>363</x>
+    <y>392</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/altitude</property>
+    <value></value>
+  </binding>
+    <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/vnav</property>
+    <value>0</value>
+  </binding>
+ </action>
+
+<action>
+    <name>Speed Select</name>
+    <button>0</button>
+    <x>330</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/speed</property>
+    <value>speed-with-throttle</value>
+  </binding>
+ </action>
+
+<action>
+    <name>Speed Select</name>
+    <button>0</button>
+    <x>335</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/speed</property>
+    <value></value>
+  </binding>
+ </action>
+
+<action>
+    <name>V/S Select</name>
+    <button>0</button>
+    <x>416</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/altitude</property>
+    <value>vertical-speed-hold</value>
+  </binding>
+ </action>
+
+<action>
+    <name>V/S Select</name>
+    <button>0</button>
+    <x>421</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/altitude</property>
+    <value></value>
+  </binding>
+ </action>
+
+ <action>
+    <name>ILS Course Decrease</name>
+    <button>1</button>
+    <x>295</x>
+    <y>382</y>
+    <w>10</w>
+    <h>12</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg</property>
+    <step>-10.0</step>
+	<min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>ILS Course Increase</name>
+    <button>1</button>
+    <x>305</x>
+    <y>382</y>
+    <w>10</w>
+    <h>12</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg</property>
+    <step>10.0</step>
+	<min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+ 
+<action>
+    <name>ILS Course Decrease</name>
+    <button>0</button>
+    <x>295</x>
+    <y>382</y>
+    <w>10</w>
+    <h>12</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg</property>
+    <step>-1.0</step>
+	<min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>ILS Course Increase</name>
+    <button>0</button>
+    <x>305</x>
+    <y>382</y>
+    <w>10</w>
+    <h>12</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/instrumentation/nav/radials/selected-deg</property>
+    <step>1.0</step>
+	<min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+ <action>
+    <name>Heading Decrease</name>
+    <button>1</button>
+    <x>373</x>
+    <y>383</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>-10.0</step>
+	<min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>Heading Increase</name>
+    <button>1</button>
+    <x>378</x>
+    <y>383</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>10.0</step>
+	<min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+ 
+<action>
+    <name>Heading Decrease</name>
+    <button>0</button>
+    <x>373</x>
+    <y>383</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>-1.0</step>
+	<min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>Heading Increase</name>
+    <button>0</button>
+    <x>378</x>
+    <y>383</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/heading-bug-deg</property>
+    <step>1.0</step>
+	<min>0</min>
+    <max>360</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+ <action>
+    <name>IAS Decrease</name>
+    <button>1</button>
+    <x>343</x>
+    <y>375</y>
+    <w>7</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/target-speed-kt</property>
+    <step>-10.0</step>
+	<min>0</min>
+    <max>450</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>IAS Increase</name>
+    <button>1</button>
+    <x>350</x>
+    <y>375</y>
+    <w>7</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/target-speed-kt</property>
+    <step>10.0</step>
+	<min>0</min>
+    <max>450</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+ 
+<action>
+    <name>IAS Decrease</name>
+    <button>0</button>
+    <x>343</x>
+    <y>375</y>
+    <w>7</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/target-speed-kt</property>
+    <step>-1.0</step>
+	<min>0</min>
+    <max>450</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>IAS Increase</name>
+    <button>0</button>
+    <x>350</x>
+    <y>375</y>
+    <w>7</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/target-speed-kt</property>
+    <step>1.0</step>
+	<min>0</min>
+    <max>450</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>Heading Select</name>
+    <button>0</button>
+    <x>374</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/heading</property>
+    <value>dg-heading-hold</value>
+  </binding>
+ </action>
+
+<action>
+    <name>Heading Select</name>
+    <button>0</button>
+    <x>379</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/heading</property>
+    <value></value>
+  </binding>
+ </action>
+
+<action>
+    <name>Altitude Decrease</name>
+    <button>0</button>
+    <x>402</x>
+    <y>380</y>
+    <w>7</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/target-altitude-ft</property>
+    <step>-100.0</step>
+	<min>0</min>
+    <max>50000</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>Altitude Increase</name>
+    <button>0</button>
+    <x>409</x>
+    <y>380</y>
+    <w>7</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/target-altitude-ft</property>
+    <step>100.0</step>
+	<min>0</min>
+    <max>50000</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+ <action>
+    <name>Altitude Decrease</name>
+    <button>1</button>
+    <x>402</x>
+    <y>380</y>
+    <w>7</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/target-altitude-ft</property>
+    <step>-1000.0</step>
+	<min>0</min>
+    <max>50000</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>Altitude Increase</name>
+    <button>1</button>
+    <x>409</x>
+    <y>380</y>
+    <w>7</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/target-altitude-ft</property>
+    <step>1000.0</step>
+	<min>0</min>
+    <max>50000</max>
+    <wrap>true</wrap>
+  </binding>
+ </action>
+ 
+<action>
+    <name>True Heading Select</name>
+    <button>0</button>
+    <x>387</x>
+    <y>392</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/heading</property>
+    <value>true-heading-hold</value>
+  </binding>
+ </action>
+
+<action>
+    <name>True Heading Select</name>
+    <button>0</button>
+    <x>392</x>
+    <y>392</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/heading</property>
+    <value></value>
+  </binding>
+ </action>
+
+ <action>
+    <name>V/S Decrease</name>
+    <button>0</button>
+    <x>431</x>
+    <y>382</y>
+    <w>6</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/vertical-speed-fpm</property>
+    <step>-100.0</step>
+	<min>-8000</min>
+    <max>8000</max>
+    <wrap>false</wrap>
+  </binding>
+ </action>
+
+ <action>
+    <name>V/S Increase</name>
+    <button>0</button>
+    <x>431</x>
+    <y>372</y>
+    <w>6</w>
+    <h>10</h>
+  <binding>
+   <command>property-adjust</command>
+    <property>/autopilot/settings/vertical-speed-fpm</property>
+    <step>100.0</step>
+	<min>-8000</min>
+    <max>8000</max>
+    <wrap>false</wrap>
+  </binding>
+ </action>
+
+<action>
+    <name>APP Lock</name>
+    <button>0</button>
+    <x>388</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/heading</property>
+    <value>nav1-hold</value>
+  </binding>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/altitude</property>
+    <value>gs1-hold</value>
+  </binding>
+</action>
+
+<action>
+    <name>APP Unlock</name>
+    <button>0</button>
+    <x>393</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/heading</property>
+    <value></value>
+  </binding>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/altitude</property>
+    <value></value>
+  </binding>
+</action>
+
+<action>
+    <name>AutoPilot Engage</name>
+    <button>0</button>
+    <x>448</x>
+    <y>367</y>
+    <w>10</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/passive-mode</property>
+    <value>0</value>
+  </binding>
+</action>
+
+<action>
+    <name>AutoPilot Disengage</name>
+    <button>0</button>
+    <x>458</x>
+    <y>367</y>
+    <w>10</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/passive-mode</property>
+    <value>1</value>
+  </binding>
+    <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/altitude</property>
+    <value></value>
+  </binding>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/heading</property>
+    <value></value>
+  </binding>
+ </action>
+
+ <action>
+    <name>Altitude Hold</name>
+    <button>0</button>
+    <x>404</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/settings/vertical-speed-fpm</property>
+    <value>0</value>
+  </binding>
+    <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/altitude</property>
+    <value>vertical-speed-hold</value>
+  </binding>
+ </action>
+
+   <action>
+    <name>Altitude Hold Off</name>
+    <button>0</button>
+    <x>409</x>
+    <y>367</y>
+    <w>5</w>
+    <h>10</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/autopilot/locks/altitude</property>
+    <value></value>
+  </binding>
+ </action>
+ 
+ <action>
+    <name>FD-On</name>
+    <button>0</button>
+    <x>313</x>
+    <y>372</y>
+    <w>6</w>
+    <h>6</h>
+  <binding>
+   <command>property-assign</command>
+    <property>/instrumentation/flightdirector/fd-on</property>
+    <value>1</value>
+  </binding>
+    <binding>
+   <command>property-assign</command>
+    <property>/instrumentation/flightdirector/vnav</property>
+    <value>1</value>
+  </binding>
+  <binding>
+     <command>property-toggle</command>
+     <property>/sim/sound/switch</property>
+  </binding>
+ </action>
+ 
+  <action>
+    <name>FD-Off</name>
+    <button>0</button>
+    <x>313</x>
+    <y>366</y>
+    <w>6</w>
+    <h>6</h>
+   <binding>
+   <command>property-assign</command>
+    <property>/instrumentation/flightdirector/fd-on</property>
+    <value>0</value>
+  </binding>
+  <binding>
+   <command>property-assign</command>
+    <property>/instrumentation/flightdirector/vnav</property>
+    <value>0</value>
+  </binding>
+  <binding>
+     <command>property-toggle</command>
+     <property>/sim/sound/switch</property>
+  </binding>
+ </action>
+ 
+<!-- AntiSkid -->
+
+ <action>
+   <name>AntiSkid on</name>
+   <button>0</button>
+   <x>472</x>
+   <y>287</y>
+   <w>4</w>
+   <h>6</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/gear/antiskid</property>
+    <value>true</value>
+   </binding>
+   <binding>
+     <command>property-toggle</command>
+     <property>/sim/sound/switch</property>
+   </binding>
+  </action>
+     
+ <action>
+   <name>Antiskid off</name>
+   <button>0</button>
+   <x>472</x>
+   <y>281</y>
+   <w>4</w>
+   <h>6</h>
+   <binding>
+    <command>property-assign</command>
+    <property>/controls/gear/antiskid</property>
+    <value>false</value>
+   </binding>
+   <binding>
+     <command>property-toggle</command>
+     <property>/sim/sound/switch</property>
+   </binding>
+  </action>
+    
+<!-- AutoBrakes -->
+
+   <action>
+   <name>AutoBrakes increase</name>
+   <button>0</button>
+   <x>478</x>
+   <y>250</y>
+   <w>6</w>
+   <h>10</h>
+   <binding>
+   <command>property-adjust</command>
+    <property>/controls/gear/autobrakes</property>
+    <step>1.0</step>
+    <min>0</min>
+    <max>5</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>AutoBrakes decrease</name>
+   <button>0</button>
+   <x>472</x>
+   <y>250</y>
+   <w>6</w>
+   <h>10</h>
+   <binding>
+   <command>property-adjust</command>
+    <property>/controls/gear/autobrakes</property>
+    <step>-1.0</step>
+    <min>0</min>
+    <max>5</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+<!-- Attitude indicator -->
+
+  <action>
+   <name>Fine Lower</name>
+   <button>0</button>
+   <x>347</x>
+   <y>278</y>
+   <w>7</w>
+   <h>9</h>
+   <binding>
+   <command>property-adjust</command>
+    <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+    <step>-0.5</step>
+    <min>-5</min>
+    <max>5</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Coarse Lower</name>
+   <button>1</button>
+   <x>347</x>
+   <y>278</y>
+   <w>7</w>
+   <h>9</h>
+   <binding>
+   <command>property-adjust</command>
+    <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+    <step>-5</step>
+    <min>-5</min>
+    <max>5</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Fine Raise</name>
+   <button>0</button>
+   <x>354</x>
+   <y>278</y>
+   <w>7</w>
+   <h>9</h>
+   <binding>
+   <command>property-adjust</command>
+    <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+    <step>0.5</step>
+    <min>-5</min>
+    <max>5</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  <action>
+   <name>Coarse Raise</name>
+   <button>1</button>
+   <x>354</x>
+   <y>278</y>
+   <w>7</w>
+   <h>9</h>
+   <binding>
+   <command>property-adjust</command>
+    <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+    <step>5</step>
+    <min>-5</min>
+    <max>5</max>
+    <wrap>false</wrap>
+   </binding>
+  </action>
+
+  </actions>
+  </instrument>
+
+ </instruments>
+
+</PropertyList>
+
+

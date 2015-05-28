@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>vsi.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>VSIface</object-name>
+        <object-name>VSI.needle</object-name>
+        <object-name>VSIbezel</object-name>
+<emission>
+	 <red>0.3</red>
+	 <green>0.25</green>
+	 <blue>0.2</blue>
+	 <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>	
+ </emission>
+   </animation>
+
+<animation>
+<type>material</type> 
+<object-name>RMI.bezel</object-name>
+<emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+	    <factor-prop>/controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>VSI.needle</object-name>
+        <property>autopilot/internal/vert-speed-fpm</property>
+        <interpolation>
+            <entry><ind>-4000.0</ind><dep>-173.0</dep></entry>
+            <entry><ind>-1000.0</ind><dep>-76.0</dep></entry>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>1000.0</ind><dep>76.0</dep></entry>
+            <entry><ind>4000.0</ind><dep>173.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

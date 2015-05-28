@@ -1,0 +1,1498 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>Navegadores.ac</path>
+
+<animation>
+<type>material</type>
+<object-name>FMC</object-name>
+<object-name>FMC_2</object-name>
+<object-name>rect</object-name>
+<object-name>box</object-name>
+<emission>
+    <red>0.3</red>
+    <green>0.25</green>
+    <blue>0.2</blue>
+	    <factor-prop>controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+<!-- Las letras se mostran solo en el caso de que EXISTA una ruta -->
+
+<animation>
+<type>select</type>
+<object-name>wp1</object-name>
+<object-name>wp2</object-name>
+<object-name>wp3</object-name>
+<object-name>wp4</object-name>
+<object-name>wp5</object-name>
+<object-name>dme10</object-name>
+<object-name>dme11</object-name>
+<object-name>dme12</object-name>
+<object-name>dme13</object-name>
+<object-name>dmedot1</object-name>
+<object-name>dme10b</object-name>
+<object-name>dme11b</object-name>
+<object-name>dme12b</object-name>
+<object-name>dme13b</object-name>
+<object-name>dmedot1b</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>0</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp21</object-name>
+<object-name>wp22</object-name>
+<object-name>wp23</object-name>
+<object-name>wp24</object-name>
+<object-name>wp25</object-name>
+<object-name>dme20</object-name>
+<object-name>dme21</object-name>
+<object-name>dme22</object-name>
+<object-name>dme23</object-name>
+<object-name>dmedot2</object-name>
+<object-name>dme20b</object-name>
+<object-name>dme21b</object-name>
+<object-name>dme22b</object-name>
+<object-name>dme23b</object-name>
+<object-name>dmedot2b</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>1</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp31</object-name>
+<object-name>wp32</object-name>
+<object-name>wp33</object-name>
+<object-name>wp34</object-name>
+<object-name>wp35</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>2</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>dme61</object-name>
+<object-name>dme62</object-name>
+<object-name>dme63</object-name>
+<object-name>dme60</object-name>
+<object-name>dmedot6</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>2</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>dme61b</object-name>
+<object-name>dme62b</object-name>
+<object-name>dme63b</object-name>
+<object-name>dme60b</object-name>
+<object-name>dmedot6b</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>2</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp41</object-name>
+<object-name>wp42</object-name>
+<object-name>wp43</object-name>
+<object-name>wp44</object-name>
+<object-name>wp45</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>3</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp51</object-name>
+<object-name>wp52</object-name>
+<object-name>wp53</object-name>
+<object-name>wp54</object-name>
+<object-name>wp55</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>4</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp61</object-name>
+<object-name>wp62</object-name>
+<object-name>wp63</object-name>
+<object-name>wp64</object-name>
+<object-name>wp65</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>5</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>dme10</object-name>
+<condition>
+<greater-than-equals>
+<property>/autopilot/route-manager/wp/dist</property>
+<value>100</value>
+</greater-than-equals>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>dme20</object-name>
+<condition>
+<greater-than-equals>
+<property>/autopilot/route-manager/wp[1]/dist</property>
+<value>100</value>
+</greater-than-equals>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>dme60</object-name>
+<condition>
+<greater-than-equals>
+<property>/autopilot/route-manager/wp-last/dist</property>
+<value>100</value>
+</greater-than-equals>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>dme10b</object-name>
+<condition>
+<greater-than-equals>
+<property>/autopilot/route-manager/wp/dist</property>
+<value>100</value>
+</greater-than-equals>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>dme20b</object-name>
+<condition>
+<greater-than-equals>
+<property>/autopilot/route-manager/wp[1]/dist</property>
+<value>100</value>
+</greater-than-equals>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>dme60b</object-name>
+<condition>
+<greater-than-equals>
+<property>/autopilot/route-manager/wp-last/dist</property>
+<value>100</value>
+</greater-than-equals>
+</condition>
+</animation>
+
+<!--Primera fila-->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp1</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp2</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp3</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp4</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp5</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+
+<!--Segunda fila-->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp21</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp22</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp23</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp24</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp25</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+
+<!-- Tercera fila -->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp31</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp32</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp33</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp34</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp35</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+<!-- Cuarta fila -->
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp41</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp42</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp43</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp44</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp45</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+<!-- Quinta fila -->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp51</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp52</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp53</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp54</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp55</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+<!-- Sexta fila -->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp61</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp62</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp63</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp64</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp65</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+
+<!--En el caso de que EXISTA una ruta-->	
+	
+<animation>
+<type>select</type>
+<object-name>wp1b</object-name>
+<object-name>wp2b</object-name>
+<object-name>wp3b</object-name>
+<object-name>wp4b</object-name>
+<object-name>wp5b</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>0</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp21b</object-name>
+<object-name>wp22b</object-name>
+<object-name>wp23b</object-name>
+<object-name>wp24b</object-name>
+<object-name>wp25b</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>1</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp31b</object-name>
+<object-name>wp32b</object-name>
+<object-name>wp33b</object-name>
+<object-name>wp34b</object-name>
+<object-name>wp35b</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>2</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp41b</object-name>
+<object-name>wp42b</object-name>
+<object-name>wp43b</object-name>
+<object-name>wp44b</object-name>
+<object-name>wp45b</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>3</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp51b</object-name>
+<object-name>wp52b</object-name>
+<object-name>wp53b</object-name>
+<object-name>wp54b</object-name>
+<object-name>wp55b</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>4</value>
+</greater-than>
+</condition>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>wp61b</object-name>
+<object-name>wp62b</object-name>
+<object-name>wp63b</object-name>
+<object-name>wp64b</object-name>
+<object-name>wp65b</object-name>
+<condition>
+<greater-than>
+<property>/autopilot/route-manager/route/num</property>
+<value>5</value>
+</greater-than>
+</condition>
+</animation>
+	
+	<!--Primera fila-->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp1b</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp2b</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp3b</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp4b</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp5b</object-name>
+	    <property>/autopilot/route-manager/wp/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+
+<!--Segunda fila-->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp21b</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp22b</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp23b</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp24b</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp25b</object-name>
+	    <property>/autopilot/route-manager/wp[1]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+
+<!-- Tercera fila -->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp31b</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp32b</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp33b</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp34b</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp35b</object-name>
+	    <property>/autopilot/route-manager/route/wp[2]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+<!-- Cuarta fila -->
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp41b</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp42b</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp43b</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp44b</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp45b</object-name>
+	    <property>/autopilot/route-manager/route/wp[3]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+<!-- Quinta fila -->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp51b</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp52b</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp53b</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp54b</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp55b</object-name>
+	    <property>/autopilot/route-manager/route/wp[4]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+<!-- Sexta fila -->
+
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp61b</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc1</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp62b</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc2</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+	    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp63b</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc3</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp64b</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc4</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+    
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>wp65b</object-name>
+	    <property>/autopilot/route-manager/route/wp[5]/id-asc5</property>
+	    <factor>0.03125</factor>
+	    <step>1</step>
+	    <offset>-1.0</offset>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+
+<!-- Distancias en NM-->
+   <animation>
+	    <type>textranslate</type>
+	    <object-name>dme10</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme11</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+  <animation>
+	 <type>textranslate</type>
+	 <object-name>dme12</object-name>
+	 <property>/autopilot/route-manager/wp/dist</property>
+	 <factor>0.10</factor>
+	 <step>1</step>
+	<axis>
+		 <x>0</x>
+          <y>1</y>
+		  <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme13</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>1.00</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>	
+
+<!--Segunda fila de distancias en NM-->
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme20</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme21</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+  <animation>
+	 <type>textranslate</type>
+	 <object-name>dme22</object-name>
+	 <property>/autopilot/route-manager/wp[1]/dist</property>
+	 <factor>0.10</factor>
+	 <step>1</step>
+	<axis>
+		 <x>0</x>
+          <y>1</y>
+		  <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme23</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>1.00</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme60</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+  <animation>
+	 <type>textranslate</type>
+	 <object-name>dme61</object-name>
+	 <property>/autopilot/route-manager/wp-last/dist</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	<axis>
+		 <x>0</x>
+          <y>1</y>
+		  <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme62</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme63</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>1.0</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+<!-- Segundo FMC - Distancias -->	
+	
+	   <animation>
+	    <type>textranslate</type>
+	    <object-name>dme10b</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme11b</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+  <animation>
+	 <type>textranslate</type>
+	 <object-name>dme12b</object-name>
+	 <property>/autopilot/route-manager/wp/dist</property>
+	 <factor>0.10</factor>
+	 <step>1</step>
+	<axis>
+		 <x>0</x>
+          <y>1</y>
+		  <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme13b</object-name>
+	    <property>/autopilot/route-manager/wp/dist</property>
+	    <factor>1.00</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>	
+
+<!--Segunda fila de distancias en NM-->
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme20b</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme21b</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>0.01</factor>
+	    <step>10</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+  <animation>
+	 <type>textranslate</type>
+	 <object-name>dme22b</object-name>
+	 <property>/autopilot/route-manager/wp[1]/dist</property>
+	 <factor>0.10</factor>
+	 <step>1</step>
+	<axis>
+		 <x>0</x>
+          <y>1</y>
+		  <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme23b</object-name>
+	    <property>/autopilot/route-manager/wp[1]/dist</property>
+	    <factor>1.00</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme60b</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>0.001</factor>
+	    <step>100</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+  <animation>
+	 <type>textranslate</type>
+	 <object-name>dme61b</object-name>
+	 <property>/autopilot/route-manager/wp-last/dist</property>
+	 <factor>0.01</factor>
+	 <step>10</step>
+	<axis>
+		 <x>0</x>
+          <y>1</y>
+		  <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme62b</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>0.1</factor>
+	    <step>1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+	
+    <animation>
+	    <type>textranslate</type>
+	    <object-name>dme63b</object-name>
+	    <property>/autopilot/route-manager/wp-last/dist</property>
+	    <factor>1.0</factor>
+	    <step>0.1</step>
+	    <axis>
+		    <x>0</x>
+		    <y>1</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+</PropertyList>

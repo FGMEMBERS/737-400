@@ -1,0 +1,1009 @@
+<?xml version="1.0"?>
+ 
+<PropertyList>
+
+ <fx>
+
+<engine>
+ <name>Left engine off</name>
+ <path>Sounds/turbine_shutdown.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/engines/engine[0]/cutoff</property>
+ </and>
+ </condition>
+  <volume>
+   <property>sim/sound/Evolume</property>
+  </volume>
+  <position>
+      <x>3.69645</x>
+      <y>4.77041</y>
+      <z>-1.30186</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>50.0</max-dist>
+ </engine>
+
+<engine>
+ <name>Right engine off</name>
+ <path>Sounds/turbine_shutdown.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/engines/engine[1]/cutoff</property>
+ </and>
+ </condition>
+  <volume>
+   <property>sim/sound/Evolume</property>
+  </volume>
+  <position>
+      <x>3.69645</x>
+      <y>-4.77041</y>
+      <z>-1.30186</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>50.0</max-dist>
+</engine>
+
+<engine>
+ <name>Left engine on</name>
+ <path>Sounds/turbine_start.wav</path>
+ <mode>once</mode>
+ <condition>
+ <and>
+  <property>controls/engines/engine[0]/starter</property>
+ </and>
+ </condition>
+  <volume>
+   <property>sim/sound/Evolume</property>
+  </volume>
+  <position>
+      <x>3.69645</x>
+      <y>4.77041</y>
+      <z>-1.30186</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>50.0</max-dist>
+ </engine>
+ 
+<engine>
+ <name>Right engine on</name>
+ <path>Sounds/turbine_start.wav</path>
+ <mode>once</mode>
+ <condition>
+  <and>
+  <property>controls/engines/engine[1]/starter</property>
+  </and>
+ </condition>
+  <volume>
+   <property>sim/sound/Evolume</property>
+  </volume>
+ <position>
+      <x>3.69645</x>
+      <y>-4.77041</y>
+      <z>-1.30186</z>
+ </position>
+ <reference-dist>10.0</reference-dist>
+ <max-dist>50.0</max-dist>
+ </engine>
+ 
+<engine>
+   <name>Left engine sound starter inside</name>
+   <path>Sounds/jet.wav</path>
+   <mode>looped</mode>
+   <condition>
+     <equals>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+     </equals>
+    <less-than>
+        <property>engines/engine[0]/n1</property>
+        <value>30</value>
+    </less-than>
+   <and>
+    <property>controls/engines/engine[0]/starter</property>     
+   </and>
+   </condition>
+  <volume>
+   <property>sim/sound/Pvolume</property>
+  </volume>
+<pitch>
+<property>/engines/engine[0]/n1</property>
+<offset>0.10</offset>
+<factor>0.01</factor>
+</pitch>
+</engine>
+
+<engine>
+   <name>Right engine sound starter inside</name>
+   <path>Sounds/jet.wav</path>
+   <mode>looped</mode>
+   <condition>
+     <equals>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+     </equals>
+    <less-than>
+        <property>engines/engine[1]/n1</property>
+        <value>30</value>
+    </less-than>
+   <and>
+    <property>controls/engines/engine[1]/starter</property>     
+   </and>
+   </condition>
+  <volume>
+   <property>sim/sound/Pvolume</property>
+  </volume>
+<pitch>
+<property>/engines/engine[1]/n1</property>
+<offset>0.10</offset>
+<factor>0.01</factor>
+</pitch>
+</engine>
+
+  <engine>
+   <name>Left engine sound starter outside</name>
+   <path>Sounds/whine.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <greater-than>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+     </greater-than>
+    <less-than>
+        <property>engines/engine[0]/n1</property>
+        <value>30</value>
+    </less-than>
+   <and>
+    <property>controls/engines/engine[0]/starter</property>     
+   </and>
+   </condition>
+  <volume>
+   <property>sim/sound/Ovolume</property>
+  </volume>
+<pitch>
+<property>/engines/engine[0]/n1</property>
+<offset>0.20</offset>
+<factor>0.05</factor>
+</pitch>
+ <position>
+      <x>3.69645</x>
+      <y>4.77041</y>
+      <z>-1.30186</z>
+ </position>
+ <reference-dist>200.0</reference-dist>
+ <max-dist>500.0</max-dist>
+ </engine>
+
+ <engine>
+   <name>Right engine sound starter outside</name>
+   <path>Sounds/whine.wav</path>
+   <mode>looped</mode>
+   <condition>
+      <greater-than>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+      </greater-than>
+       <less-than>
+        <property>engines/engine[1]/n1</property>
+        <value>30</value>
+      </less-than>
+   <and>
+    <property>controls/engines/engine[1]/starter</property>     
+   </and>
+   </condition>
+   <volume>
+    <property>sim/sound/Ovolume</property>
+   </volume>
+<pitch>
+<property>/engines/engine[1]/n1</property>
+<offset>0.20</offset>
+<factor>0.05</factor>
+</pitch>
+<position>
+      <x>3.69645</x>
+      <y>-4.77041</y>
+      <z>-1.30186</z>
+</position>
+<reference-dist>200.0</reference-dist>
+<max-dist>500.0</max-dist>
+ </engine>
+
+  <engine>
+   <name>Left engine sound inside</name>
+   <path>realt154/crj7_bn22.wav</path>
+   <mode>looped</mode>
+   <condition>
+   <and>
+      <not>
+        <property>controls/engines/engine[0]/cutoff</property>
+      </not>
+      <equals>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+      </equals>
+    <property>/engines/engine[0]/n1</property>      
+   </and>
+   </condition>
+   <volume>
+    <property>/engines/engine[0]/thrust_lb</property>
+    <type>ln</type>
+    <factor>0.05</factor>
+    <offset>0.05</offset>
+   </volume>
+   <pitch>
+    <property>/engines/engine[0]/thrust_lb</property>
+    <type>log</type>
+    <factor>0.26</factor>
+    <offset>0.1</offset>
+</pitch>
+  </engine>
+
+  <engine>
+   <name>Right engine sound inside</name>
+   <path>realt154/crj7_bn22.wav</path>
+   <mode>looped</mode>
+   <condition>
+   <and>
+      <not>
+        <property>controls/engines/engine[1]/cutoff</property>
+      </not>
+      <equals>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+      </equals>
+     <property>/engines/engine[1]/n1</property>      
+   </and>
+   </condition>
+   <volume>
+    <property>/engines/engine[1]/thrust_lb</property>
+    <type>ln</type>
+    <factor>0.05</factor>
+    <offset>0.05</offset>
+   </volume>   
+   <pitch>
+    <property>/engines/engine[1]/thrust_lb</property>
+    <type>log</type>
+    <factor>0.26</factor>
+    <offset>0.1</offset>
+</pitch>
+  </engine>
+
+  <engine>
+   <name>Left engine sound outside</name>
+   <path>realt154/xcrj7_an11.wav</path>
+   <mode>looped</mode>
+   <condition>
+     <and>
+      <not>
+        <property>controls/engines/engine[0]/cutoff</property>
+      </not>
+     <property>/engines/engine[0]/n1</property>    
+    </and>
+   <property>/sim/current-view/view-number</property>
+   <value>0</value>
+   </condition>
+   <volume>
+    <property>/engines/engine[0]/thrust_lb</property>
+    <type>ln</type>
+    <factor>0.20</factor>
+    <offset>0.01</offset>
+   </volume>
+   <position>
+      <x>3.69645</x>
+      <y>4.77041</y>
+      <z>-1.30186</z>
+   </position>
+   <reference-dist>200.0</reference-dist>
+   <max-dist>500.0</max-dist>
+   <pitch>
+    <property>/engines/engine[0]/thrust_lb</property>
+    <type>log</type>
+    <factor>0.26</factor>
+    <offset>0.1</offset>
+   </pitch>
+  </engine>
+
+ <engine>
+   <name>Right engine sound outside</name>
+   <path>realt154/xcrj7_an11.wav</path>
+   <mode>looped</mode>
+   <condition>
+     <and>
+      <not>
+        <property>controls/engines/engine[1]/cutoff</property>
+      </not>
+     <property>/engines/engine[1]/n1</property>    
+    </and>
+   <property>/sim/current-view/view-number</property>
+   <value>0</value>
+   </condition>
+   <volume>
+    <property>/engines/engine[1]/thrust_lb</property>
+    <type>ln</type>
+    <factor>0.20</factor>
+    <offset>0.01</offset>
+   </volume>
+   <position>
+      <x>3.69645</x>
+      <y>-4.77041</y>
+      <z>-1.30186</z>
+   </position>
+   <reference-dist>200.0</reference-dist>
+   <max-dist>500.0</max-dist>
+   <pitch>
+    <property>/engines/engine[1]/thrust_lb</property>
+    <type>log</type>
+    <factor>0.26</factor>
+    <offset>0.1</offset>
+   </pitch>
+  </engine>
+    
+ <engine>
+   <name>Left engine reverse inside</name>
+   <path>Sounds/exhaust_loop.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <or>
+     <property>/engines/engine/reverser-pos-norm</property>    
+    </or>
+    <and>
+     <property>engines/engine[0]/running</property>
+    </and>
+   </condition>
+   <volume>
+    <property>/engines/engine[0]/thrust_lb</property>
+    <type>ln</type>
+    <factor>0.0050</factor>
+    <offset>0.05</offset>
+   </volume>
+   <pitch>
+    <offset>1.6</offset>
+   </pitch>
+  </engine>
+
+  <engine>
+   <name>Right engine reverse inside</name>
+   <path>Sounds/exhaust_loop.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <or>
+     <property>/engines/engine[1]/reverser-pos-norm</property>    
+    </or>
+    <and>
+     <property>engines/engine[1]/running</property>
+    </and>
+   </condition>
+   <volume>
+    <property>/engines/engine[1]/thrust_lb</property>
+    <type>ln</type>
+    <factor>0.0050</factor>
+    <offset>0.05</offset>
+   </volume>
+   <pitch>
+    <offset>1.6</offset>
+   </pitch>
+  </engine>
+
+  <engine>
+     <name>Left engine reverser outside</name>
+       <path>Sounds/exhaust_loop.wav</path>
+        <condition>
+            <greater-than>
+                <property>/engines/engine/reverser-pos-norm</property>
+                <value>0</value>
+            </greater-than>
+            <greater-than>
+                 <property>/sim/current-view/view-number</property>
+                 <value>0</value>
+            </greater-than>
+            <and>
+             <property>engines/engine[0]/running</property>
+            </and>
+        </condition>
+        <mode>looped</mode>
+        <volume>
+            <property>/engines/engine/reverser-pos-norm</property>
+            <factor>1.0</factor>
+        </volume>
+        <volume>
+            <property>sim/sound/Ovolume</property>
+        </volume>
+        <pitch>
+            <offset>1.6</offset>
+        </pitch>
+        <position>
+           <x>3.69645</x>
+           <y>4.77041</y>
+           <z>-1.30186</z>
+        </position>
+        <reference-dist>100.0</reference-dist>
+        <max-dist>500.0</max-dist>
+    </engine>
+
+    <engine>
+        <name>Right engine reverser outside</name>
+        <path>Sounds/exhaust_loop.wav</path>
+        <condition>
+            <greater-than>
+                <property>/fdm/jsbsim/propulsion/engine[1]/reverser-angle-rad</property>
+                <value>0</value>
+            </greater-than>
+            <greater-than>
+                 <property>/sim/current-view/view-number</property>
+                 <value>0</value>
+            </greater-than>
+            <and>
+             <property>engines/engine[1]/running</property>
+            </and>
+        </condition>
+        <mode>looped</mode>
+        <volume>
+            <property>/engines/engine/reverser-pos-norm</property>
+            <factor>1.0</factor>
+        </volume>
+        <volume>
+            <property>sim/sound/Ovolume</property>
+        </volume>
+        <pitch>
+            <offset>1.6</offset>
+        </pitch>
+        <position>
+           <x>3.69645</x>
+           <y>-4.77041</y>
+           <z>-1.30186</z>
+        </position>
+        <reference-dist>100.0</reference-dist>
+        <max-dist>500.0</max-dist>
+    </engine>
+
+  <rumble>
+   <name>rumble</name>
+   <mode>looped</mode>
+   <path>Sounds/rumble.wav</path>
+   <condition>
+    <or>
+     <property>/gear/gear[0]/wow</property>
+     <property>/gear/gear[1]/wow</property>
+     <property>/gear/gear[2]/wow</property>
+    </or>
+   </condition>
+  </rumble>
+
+   <gear>
+   <name>gear</name>
+   <mode>in-transit</mode>
+   <path>realt154/86GEARDN.wav</path>
+   <property>/gear/gear[0]/position-norm</property>
+   <pitch>
+    <internal>dt_play</internal>
+    <offset>1.0</offset>
+    <factor>0.50</factor>
+   </pitch>
+  </gear>
+
+  <gear>
+   <name>gear-lock</name>
+   <path>Sounds/gear-lck.wav</path>
+   <condition>
+    <equals>
+     <property>/gear/gear[0]/position-norm</property>
+     <value>0</value>
+    </equals>
+   </condition>
+  </gear>
+
+  <!-- 
+  <gear>
+   <name>gear-horn</name>
+   <path>Sounds/gear-hrn.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <equals>
+     <property>/gear/gear[0]/position-norm</property>
+     <value>0</value>
+     </equals>
+     </condition>      
+  </gear>
+  -->
+
+  <squeal>
+   <name>squeal</name>
+   <path>Aircraft/737-400/Sounds/touchdown.wav</path>
+   <condition>
+    <or>
+     <property>/gear/gear[0]/wow</property>
+     <property>/gear/gear[1]/wow</property>
+     <property>/gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>/velocities/speed-down-fps</property>
+    <factor>0.05</factor>
+   </volume>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+   </volume>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
+   </volume>
+   <pitch>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.0025</factor>
+    <offset>1.2</offset>
+   </pitch>
+  </squeal>
+ 
+  <flap>
+   <name>flaps</name>
+   <mode>in-transit</mode>
+   <path>Aircraft/737-400/Sounds/Flaps.wav</path>
+   <property>/surface-positions/flap-pos-norm</property>
+   <volume>
+    <factor>0.30</factor>
+   </volume>
+  </flap>
+
+ <wind>
+   <name>wind</name>
+   <mode>looped</mode>
+   <path>realt154/wind.wav</path>
+   <property>/velocities/airspeed-kt</property>
+   <volume>
+    <property>/position/altitude-ft</property>
+    <factor>-0.000015</factor>
+    <offset>1.0</offset>
+    <min>0.0</min>
+    <max>1.0</max>
+   </volume>
+   <volume>
+     <property>/velocities/airspeed-kt</property>
+     <factor>0.001</factor>
+     <min>0.0</min>
+     <max>0.0</max>
+   </volume>
+   <pitch>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+    <offset>1.25</offset>
+   </pitch>
+  </wind>
+ 
+  <overspeed>
+	<name>overspeed</name>
+	<mode>looped</mode>
+	<path>Sounds/overspeed2.wav</path>
+	<condition>
+		<greater-than>
+		<property>velocities/airspeed-kt</property>
+		<value>340</value>
+		</greater-than>
+		<equals>
+		<property>sim/current-view/view-number</property>
+		<value>0</value>
+	      </equals>
+	</condition>
+		<volume>
+		<factor>1.0</factor>
+		</volume>
+		<pitch>
+		<factor>0.1</factor>
+		</pitch>
+		<reference-dist>1.0</reference-dist>
+		<max-dist>2.0</max-dist>
+</overspeed>
+
+ <stall>
+        <name>stall</name>
+        <mode>looped</mode>
+        <path>/Aircraft/737-400/Sounds/stall.wav</path>
+        <condition>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>140</value>
+            </less-than>
+            <not>
+                <property>/gear/gear[0]/wow</property>
+                <property>/gear/gear[1]/wow</property>
+                <property>/gear/gear[2]/wow</property>
+                <property>/surface-positions/flap-pos-norm</property>
+                <property>/gear/gear[0]/position-norm</property>
+            </not>
+        </condition>
+        <volume>
+            <max>0.5</max>
+        </volume>
+        <position>
+            <x>-1.5</x>
+            <y>1.59</y>
+            <z>-7.25</z>
+        </position>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>2.0</max-dist>
+ </stall>
+
+<stall>
+        <name>stall</name>
+        <mode>looped</mode>
+        <path>/Aircraft/737-400/Sounds/stall.wav</path>
+        <condition>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>110</value>
+            </less-than>
+            <not>
+                <property>/gear/gear[0]/wow</property>
+                <property>/gear/gear[1]/wow</property>
+                <property>/gear/gear[2]/wow</property>
+                <property>/gear/gear[0]/position-norm</property>
+            </not>
+        </condition>
+        <volume>
+            <max>0.5</max>
+        </volume>
+        <position>
+            <x>-1.5</x>
+            <y>1.59</y>
+            <z>-7.25</z>
+        </position>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>2.0</max-dist>
+ </stall>
+
+ <stall>
+        <name>stall</name>
+        <mode>looped</mode>
+        <path>/Aircraft/737-400/Sounds/stall.wav</path>
+        <condition>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>100</value>
+            </less-than>
+            <not>
+                <property>/gear/gear[0]/wow</property>
+                <property>/gear/gear[1]/wow</property>
+                <property>/gear/gear[2]/wow</property>
+                <property>/surface-positions/flap-pos-norm</property>
+            </not>
+        </condition>
+        <volume>
+            <max>0.5</max>
+        </volume>
+        <position>
+            <x>-1.5</x>
+            <y>1.59</y>
+            <z>-7.25</z>
+        </position>
+        <reference-dist>1.0</reference-dist>
+        <max-dist>2.0</max-dist>
+ </stall>
+
+<switch>
+   <name>click on</name>
+   <mode>once</mode>
+   <path>Aircraft/737-400/Sounds/click.wav</path>
+   <condition>
+<property>/sim/sound/switch</property>
+</condition>
+   <volume>
+    <factor>0.45</factor>
+   </volume>
+  </switch>
+
+<switch>
+   <name>click off</name>
+   <mode>once</mode>
+   <path>Aircraft/737-400/Sounds/click.wav</path>
+   <condition>
+   <not>
+<property>/sim/sound/switch</property>
+</not>
+</condition>
+   <volume>
+    <factor>0.45</factor>
+   </volume>
+  </switch>
+  
+  <switch>
+   <name>Autopilot Disengage</name>
+   <mode>once</mode>
+   <path>Aircraft/737-400/Sounds/apdisengage.wav</path>
+   <condition>
+   <and>
+   <equals>
+    <property>/autopilot/locks/cmda</property>
+	<value>0</value>
+	</equals>
+	<equals>
+	<property>/autopilot/locks/cmda-disengage</property>
+	<value>1</value>
+	</equals>
+   </and>
+</condition>
+   <volume>
+    <factor>0.45</factor>
+   </volume>
+  </switch>
+
+     <rain>
+	    <name>rain</name>
+	    <mode>looped</mode>
+	    <path>Aircraft/737-400/Sounds/rain.wav</path>
+	    <condition>
+		    <and>
+			    <equals>
+				    <property>environment/rain/above_clouds</property>
+				    <value>0</value>
+			    </equals>
+			    <or>
+				    <greater-than>
+					    <property>environment/metar/rain-norm</property>
+					    <value>0.2</value>
+				    </greater-than>
+				    <greater-than>
+					    <property>environment/metar/snow-norm</property>
+					    <value>0.2</value>
+				    </greater-than>
+			    </or>
+		    </and>
+	 </condition>
+	    <volume>
+		    <property>/environment/metar/rain-norm</property>
+		    <factor>1.00</factor>
+		    <offset>0.00</offset>
+		    <min>0.4</min>
+		<max>0.9</max>
+	    </volume>
+	    <pitch>
+		    <property>/velocities/airspeed-kt</property>
+		    <factor>0.001</factor>
+		    <offset>1.0</offset>
+            </pitch>
+      </rain>
+
+<!-- SONIDOS PROTOTCAS -->
+	<tcas>
+		<name>desciende</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/descend_descend.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>1</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   		</volume>
+	</tcas>	
+	<tcas2>
+		<name>desciende-ahora</name>
+		<mode>twice</mode>
+		<path>/Aircraft/737-400/Sounds/descend_now.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>2</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   		</volume>
+	</tcas2>	
+	<tcas3>
+		<name>asciende</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/climb_climb.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>3</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   		</volume>
+	</tcas3>
+
+	<tcas4>
+		<name>asciende-ahora</name>
+		<mode>twice</mode>
+		<path>/Aircraft/737-400/Sounds/climb_now.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>4</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   		</volume>
+	</tcas4>
+	
+	<tcas5>
+		<name>trafico</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/traffic_traffic.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>5</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   		</volume>
+	</tcas5>
+	
+	<tcas6>
+		<name>crossdescend</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/descend_crossing_descend.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>6</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   	</volume>
+	</tcas6>
+	
+	<tcas7>
+		<name>crossclimb</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/climb_crossing_climb.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>7</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   		</volume>
+	</tcas7>
+
+	<tcas8>
+		<name>adjust</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/adjust_vertical_speed.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>8</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   		</volume>
+	</tcas8>
+	
+	<tcas10>
+		<name>incclimb</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/increase_climb.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>10</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   	</volume>
+	</tcas10>
+	
+	<tcas11>
+		<name>incdes</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/increase_descend.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>11</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   	</volume>
+	</tcas11>
+	
+	<tcas12>
+		<name>manver</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/maintain_vertical_speed.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>12</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   	</volume>
+	</tcas12>
+	
+	<tcas13>
+		<name>manvercross</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/maintain_vertical_speed_crossing.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>13</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   	</volume>
+	</tcas13>
+	
+	<tcas9>
+		<name>monver</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/monitor_vertical_speed.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>9</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   	</volume>
+	</tcas9>
+	
+	<tcas99>
+		<name>clrconflict</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/clear_of_confict.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/tcas/order</property>
+				    <value>99</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   	</volume>
+	</tcas99>
+	
+	<tcastestOK>
+		<name>tcasOK</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/tcas_ok.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/transponder/ta-ra</property>
+				    <value>1</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   	</volume>
+	</tcastestOK>
+	
+	<tcastestfailed>
+		<name>tcasfails</name>
+		<mode>once</mode>
+		<path>/Aircraft/737-400/Sounds/tcas_fail.wav</path>
+		<condition>
+			<equals>
+				    <property>instrumentation/transponder/ta-ra</property>
+				    <value>69</value>
+			</equals>
+		</condition>
+		<volume>
+    			<factor>1.5</factor>
+   	</volume>
+	</tcastestfailed>				
+
+</fx>
+ 
+</PropertyList>

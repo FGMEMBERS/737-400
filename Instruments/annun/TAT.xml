@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>tat.ac</path>
+  
+<animation>
+        <type>material</type>
+        <object-name>t1</object-name>
+        <object-name>t2</object-name>
+        <object-name>Temp.sign</object-name>
+ <emission>
+    <red>0.3</red>
+    <green>0.25</green>
+    <blue>0.2</blue>
+	    <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+ </emission>
+   </animation>
+
+  <animation>
+        <type>material</type>
+        <object-name>TAT</object-name>
+        <object-name>C</object-name>
+        <object-name>0</object-name>
+       <emission>
+            <red>0.035</red>
+            <green>0.012</green>
+            <blue>0.007</blue>
+            <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+       </emission>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Temp.sign</object-name>
+<condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
+<less-than>
+ <property>/environment/temperature-degc</property>
+<value>00.00</value>
+</less-than>
+   </and>
+</condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Temp.sign_2</object-name>
+<condition>
+   <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
+<greater-than>
+	<property>/environment/temperature-degc</property>
+	<value>00.00</value>
+     	</greater-than>
+   </and>
+</condition>
+ </animation>
+
+<animation>
+<type>select</type>
+<object-name>t3</object-name>
+<object-name>t4</object-name>
+  <condition>
+     <and>
+      <less-than>
+	 <property>/environment/temperature-degc</property>
+	 <value>00.00</value> 
+      </less-than>
+     </and>
+  </condition>
+ </animation>
+
+<animation>
+<type>select</type>
+<object-name>t1</object-name>
+<object-name>t2</object-name>
+  <condition>
+     <and>
+      <greater-than>
+	 <property>/environment/temperature-degc</property>
+	 <value>00.00</value> 
+      </greater-than>
+     </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>t1</object-name>
+  <property>/environment/temperature-degc</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>t2</object-name>
+  <property>/environment/temperature-degc</property>
+  <factor>0.10</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>textranslate</type>
+  <object-name>t3</object-name>
+  <property>/environment/temperature-degc</property>
+  <factor>-0.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>t4</object-name>
+  <property>/environment/temperature-degc</property>
+  <factor>-0.10</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- LoD -->
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>1000</max-m>
+</animation>
+
+</PropertyList>

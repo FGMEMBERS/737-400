@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>flapgauge.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>Cylinder.001</object-name>
+        <object-name>needle</object-name>
+        <object-name>Circle</object-name>
+  <emission>
+    <red>0.3</red>
+    <green>0.25</green>
+    <blue>0.2</blue>
+	    <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+ </emission>
+   </animation>
+
+  <animation>
+        <type>rotate</type>
+        <object-name>needle</object-name>
+        <property>/surface-positions/flap-pos-norm</property>      
+       <interpolation>       
+        <entry><ind>  0.000</ind><dep> 0.0</dep></entry>       
+        <entry><ind>  0.125</ind><dep> 37.0</dep></entry>       
+        <entry><ind>  0.250</ind><dep>  81.0</dep></entry>       
+        <entry><ind>  0.375</ind><dep>  119.0</dep></entry>       
+        <entry><ind>  0.500</ind><dep>  158.0</dep></entry>       
+        <entry><ind>  0.625</ind><dep>  185.0</dep></entry>       
+        <entry><ind>  0.750</ind><dep> 217.0</dep></entry>       
+        <entry><ind>  0.875</ind><dep> 249.0</dep></entry>       
+        <entry><ind>  1.000</ind><dep> 273.0</dep></entry>      
+      </interpolation>
+             <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis> 
+ </animation>
+
+</PropertyList>
+

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>n1.ac</path>
+
+<animation>
+  <type>select</type>
+  <object-name>n1</object-name>
+   <condition>
+   <and>
+    <equals>
+     <property>/engines/engine[1]/n1</property>
+     <value>100</value>
+    </equals>
+   </and>
+   </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>n2</object-name>
+   <condition>
+   <and>
+    <greater-than-equals>
+     <property>/engines/engine[1]/n1</property>
+     <value>10</value>
+    </greater-than-equals>
+   </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>textranslate</type>
+   <object-name>n1</object-name>
+   <property>/engines/engine[1]/n1</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+	
+<animation>
+   <type>textranslate</type>
+   <object-name>n2</object-name>
+   <property>/engines/engine[1]/n1</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>n3</object-name>
+  <property>/engines/engine[1]/n1</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+     <animation>
+    <type>rotate</type>
+    <object-name>bigneedle</object-name>
+     <property>engines/engine[1]/n1</property>
+     <factor>2.65</factor>
+     <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+   </animation>
+   
+<animation>
+    <type>rotate</type>
+    <object-name>littleneedle</object-name>
+     <property>engines/engine[1]/n1</property>
+     <factor>36</factor>
+       <center>
+        <x-m>0</x-m>
+        <y-m>-0.0110</y-m>
+        <z-m>0.0128</z-m>
+       </center>
+    <axis>
+      <x>-1</x>
+      <y> 0</y>
+      <z> 0</z>
+    </axis>
+  </animation>
+
+  <animation> 
+   <object-name>littleneedle</object-name>
+   <type>material</type>
+<emission>
+	 <red>0.3</red>
+	 <green>0.25</green>
+	 <blue>0.2</blue>
+	 <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>	
+ </emission>
+   </animation>
+
+  <animation> 
+   <object-name>face</object-name>
+   <type>material</type>
+<emission>
+	 <red>0.3</red>
+	 <green>0.25</green>
+	 <blue>0.2</blue>
+	 <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>	
+ </emission>
+   </animation>
+
+  <animation> 
+   <object-name>bigneedle</object-name>
+   <type>material</type>
+<emission>
+	 <red>0.3</red>
+	 <green>0.25</green>
+	 <blue>0.2</blue>
+	 <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>	
+ </emission>
+   </animation>
+
+</PropertyList>

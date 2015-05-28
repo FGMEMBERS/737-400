@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>eicas_2.ac</path>
+ 
+<animation>
+<type>material</type> 
+<object-name>box1</object-name>
+<object-name>box2</object-name>
+<object-name>box3</object-name>
+<object-name>22000</object-name>
+<object-name>22000_2</object-name>
+<object-name>rect_2</object-name>
+<object-name>rect</object-name>
+<object-name>1</object-name>
+<object-name>2</object-name>
+<object-name>ENGINE THRUST_2</object-name>
+<object-name>ENGINE THRUST</object-name>
+<object-name>rect</object-name>
+<object-name>disk</object-name>
+<object-name>disk2</object-name>
+<emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+	    <factor-prop>/controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+<!-- LoD -->
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>30</max-m>
+</animation>
+
+</PropertyList>

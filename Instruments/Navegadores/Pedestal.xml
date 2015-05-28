@@ -1,0 +1,743 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>Pedestal.ac</path>
+
+<animation>
+<type>material</type>
+<object-name>wx2</object-name>
+<object-name>adf1</object-name>
+<object-name>adf2</object-name>
+<object-name>efis</object-name>
+<object-name>pedestal</object-name>
+<object-name>com1ac</object-name>
+<object-name>com1sb</object-name>
+<object-name>nav1sb</object-name>
+<object-name>nav1ac</object-name>
+<object-name>wx1</object-name>
+<object-name>squhawk</object-name>
+<object-name>com2ac</object-name>
+<object-name>nav2ac</object-name>
+<object-name>nav2sb</object-name>
+<object-name>com2sb</object-name>
+<object-name>cabin_lights</object-name>
+<object-name>panel_lights</object-name>
+<object-name>atc1k</object-name>
+<object-name>atc2</object-name>
+ <emission>
+    <red>0.3</red>
+    <green>0.25</green>
+    <blue>0.2</blue>
+    <factor-prop>controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+ 
+<animation>
+        <type>material</type>
+        <object-name>radiocom1sb10000</object-name>
+        <object-name>radiocom1sb1000</object-name>
+        <object-name>radiocom1sb100</object-name>
+        <object-name>radiocom1sb10</object-name>
+        <object-name>radiocom1sb1</object-name>
+        <object-name>radiocom2ac10000</object-name>
+        <object-name>radiocom2ac1000</object-name>
+        <object-name>radiocom2ac100</object-name>
+        <object-name>radiocom2ac10</object-name>
+        <object-name>radiocom2ac1</object-name>
+        <object-name>radiocom2sb10000</object-name>
+        <object-name>radiocom2sb1000</object-name>
+        <object-name>radiocom2sb100</object-name>
+        <object-name>radiocom2sb10</object-name>
+        <object-name>radiocom2sb1</object-name>
+ <emission>
+    <red>0.3</red>
+    <green>0.25</green>
+    <blue>0.2</blue>
+	    <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+ </emission>
+   </animation>
+ 
+ <!-- COM 1, Active Radio -->
+ 
+ 	<animation>
+   		<type>textranslate</type>
+   		<object-name>radiocom1ac10000</object-name>
+   		<property>/instrumentation/comm/frequencies/selected-mhz</property>
+   		<factor>0.001</factor>
+   		<step>100</step>
+   		<axis>
+     		<x>0</x>
+     		<y>1</y>
+     		<z>0</z>
+   		</axis>
+ 	</animation>
+	
+	<animation>
+   		<type>textranslate</type>
+   		<object-name>radiocom1ac1000</object-name>
+   		<property>/instrumentation/comm/frequencies/selected-mhz</property>
+   		<factor>0.01</factor>
+   		<step>10</step>
+   		<axis>
+     		<x>0</x>
+     		<y>1</y>
+     		<z>0</z>
+   		</axis>
+ 	</animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom1ac100</object-name>
+  <property>/instrumentation/comm/frequencies/selected-mhz</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom1ac10</object-name>
+  <property>/instrumentation/comm/frequencies/selected-mhz</property>
+  <factor>1.0</factor>
+  <step>0.10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom1ac1</object-name>
+  <property>/instrumentation/comm/frequencies/selected-mhz</property>
+  <factor>10.0</factor>
+  <step>0.010</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radiocom1sb10000</object-name>
+   	<property>/instrumentation/comm/frequencies/standby-mhz</property>
+   	<factor>0.001</factor>
+   	<step>100</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+	
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radiocom1sb1000</object-name>
+   	<property>/instrumentation/comm/frequencies/standby-mhz</property>
+   	<factor>0.01</factor>
+   	<step>10</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom1sb100</object-name>
+  <property>/instrumentation/comm/frequencies/standby-mhz</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom1sb10</object-name>
+  <property>/instrumentation/comm/frequencies/standby-mhz</property>
+  <factor>1.0</factor>
+  <step>0.10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom1sb1</object-name>
+  <property>/instrumentation/comm/frequencies/standby-mhz</property>
+  <factor>10.0</factor>
+  <step>0.010</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- COM 2, Active Radio -->
+ 
+ <animation>
+   	<type>textranslate</type>
+   	<object-name>radiocom2ac10000</object-name>
+   	<property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+   	<factor>0.001</factor>
+   	<step>100</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+	
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radiocom2ac1000</object-name>
+   	<property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+   	<factor>0.01</factor>
+   	<step>10</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom2ac100</object-name>
+  <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom2ac10</object-name>
+  <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+  <factor>1.0</factor>
+  <step>0.10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom2ac1</object-name>
+  <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+  <factor>10.0</factor>
+  <step>0.010</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radiocom2sb10000</object-name>
+   	<property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+   	<factor>0.001</factor>
+   	<step>100</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+	
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radiocom2sb1000</object-name>
+   	<property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+   	<factor>0.01</factor>
+   	<step>10</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom2sb100</object-name>
+  <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom2sb10</object-name>
+  <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+  <factor>1.0</factor>
+  <step>0.10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>radiocom2sb1</object-name>
+  <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+  <factor>10.0</factor>
+  <step>0.010</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- NAV1 -->
+ 
+ <animation>
+   	<type>textranslate</type>
+   	<object-name>radionav1ac10000</object-name>
+   	<property>/instrumentation/nav/frequencies/selected-mhz-fmt</property>
+   	<factor>0.001</factor>
+   	<step>100</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+	
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radionav1ac1000</object-name>
+   	<property>/instrumentation/nav/frequencies/selected-mhz-fmt</property>
+   	<factor>0.01</factor>
+   	<step>10</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav1ac100</object-name>
+  <property>/instrumentation/nav/frequencies/selected-mhz-fmt</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav1ac10</object-name>
+  <property>/instrumentation/nav/frequencies/selected-mhz-fmt</property>
+  <factor>1.0</factor>
+  <step>0.10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav1ac1</object-name>
+  <property>/instrumentation/nav/frequencies/selected-mhz-fmt</property>
+  <factor>10.0</factor>
+  <step>0.010</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radionav1sb10000</object-name>
+   	<property>/instrumentation/nav/frequencies/standby-mhz-fmt</property>
+   	<factor>0.001</factor>
+   	<step>100</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+	
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radionav1sb1000</object-name>
+   	<property>/instrumentation/nav/frequencies/standby-mhz-fmt</property>
+   	<factor>0.01</factor>
+   	<step>10</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav1sb100</object-name>
+  <property>/instrumentation/nav/frequencies/standby-mhz-fmt</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav1sb10</object-name>
+  <property>/instrumentation/nav/frequencies/standby-mhz-fmt</property>
+  <factor>1.0</factor>
+  <step>0.10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav1sb1</object-name>
+  <property>/instrumentation/nav/frequencies/standby-mhz-fmt</property>
+  <factor>10.0</factor>
+  <step>0.010</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- NAV2 -->
+ 
+ <animation>
+   	<type>textranslate</type>
+   	<object-name>radionav2ac10000</object-name>
+   	<property>/instrumentation/nav[1]/frequencies/selected-mhz-fmt</property>
+   	<factor>0.001</factor>
+   	<step>100</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+	
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radionav2ac1000</object-name>
+   	<property>/instrumentation/nav[1]/frequencies/selected-mhz-fmt</property>
+   	<factor>0.01</factor>
+   	<step>10</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav2ac100</object-name>
+  <property>/instrumentation/nav[1]/frequencies/selected-mhz-fmt</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav2ac10</object-name>
+  <property>/instrumentation/nav[1]/frequencies/selected-mhz-fmt</property>
+  <factor>1.0</factor>
+  <step>0.10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav2ac1</object-name>
+  <property>/instrumentation/nav[1]/frequencies/selected-mhz-fmt</property>
+  <factor>10.0</factor>
+  <step>0.010</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radionav2sb10000</object-name>
+   	<property>/instrumentation/nav[1]/frequencies/standby-mhz-fmt</property>
+   	<factor>0.001</factor>
+   	<step>100</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+	
+<animation>
+   	<type>textranslate</type>
+   	<object-name>radionav2sb1000</object-name>
+   	<property>/instrumentation/nav[1]/frequencies/standby-mhz-fmt</property>
+   	<factor>0.01</factor>
+   	<step>10</step>
+   	<axis>
+     	<x>0</x>
+     	<y>1</y>
+     	<z>0</z>
+   	</axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav2sb100</object-name>
+  <property>/instrumentation/nav[1]/frequencies/standby-mhz-fmt</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav2sb10</object-name>
+  <property>/instrumentation/nav[1]/frequencies/standby-mhz-fmt</property>
+  <factor>1.0</factor>
+  <step>0.10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>radionav2sb1</object-name>
+  <property>/instrumentation/nav[1]/frequencies/standby-mhz-fmt</property>
+  <factor>10.0</factor>
+  <step>0.010</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- ADF 1 -->
+
+<animation>
+   <type>textranslate</type>
+   <object-name>adf1ac10000</object-name>
+   <property>/instrumentation/adf/frequencies/selected-khz</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+	
+<animation>
+   <type>textranslate</type>
+   <object-name>adf1ac1000</object-name>
+   <property>/instrumentation/adf/frequencies/selected-khz</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>adf1ac100</object-name>
+  <property>/instrumentation/adf/frequencies/selected-khz</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<!-- ADF 2 -->
+
+<animation>
+   <type>textranslate</type>
+   <object-name>adf2ac10000</object-name>
+   <property>/instrumentation/adf/frequencies/standby-khz</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+	
+<animation>
+   <type>textranslate</type>
+   <object-name>adf2ac1000</object-name>
+   <property>/instrumentation/adf/frequencies/standby-khz</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>adf2ac100</object-name>
+  <property>/instrumentation/adf/frequencies/standby-khz</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <!--Squhawk-->
+ 
+  <animation>
+   <type>textranslate</type>
+   <object-name>atc1000</object-name>
+  <property>/instrumentation/transponder/id-code</property>
+   <factor>0.0001</factor>
+   <step>1000</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+ 
+ <animation>
+   <type>textranslate</type>
+   <object-name>atc100</object-name>
+  <property>/instrumentation/transponder/id-code</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+	
+<animation>
+   <type>textranslate</type>
+   <object-name>atc10</object-name>
+  <property>/instrumentation/transponder/id-code</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>atc1</object-name>
+  <property>/instrumentation/transponder/id-code</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- Bottons rotation -->
+ 
+     <animation>
+        <type>rotate</type>
+        <object-name>cabin_lights</object-name>
+        <property>/controls/lighting/panel-norm</property>
+        <factor>-250</factor>
+        <center>
+            <x-m>-7.92327</x-m>
+            <y-m>-0.0334461</y-m>
+            <z-m>0.357013</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+
+</PropertyList>

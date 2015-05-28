@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<!-- EGT, by Dave Culp -->
+
+<PropertyList>
+
+ <path>EGT.ac</path>
+
+<animation>
+  <type>select</type>
+  <object-name>e1</object-name>
+   <condition>
+   <and>
+    <greater-than-equals>
+     <property>/engines/engine[1]/egt_degf</property>
+     <value>1000</value>
+    </greater-than-equals>
+   </and>
+   </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>e2</object-name>
+   <condition>
+   <and>
+    <greater-than-equals>
+     <property>/engines/engine[1]/egt_degf</property>
+     <value>100</value>
+    </greater-than-equals>
+   </and>
+   </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>e3</object-name>
+   <condition>
+   <and>
+    <greater-than-equals>
+     <property>/engines/engine[1]/egt_degf</property>
+     <value>10</value>
+    </greater-than-equals>
+   </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>textranslate</type>
+   <object-name>e1</object-name>
+   <property>/engines/engine[1]/egt_degf</property>
+   <factor>0.0001</factor>
+   <step>1000</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+	
+<animation>
+   <type>textranslate</type>
+   <object-name>e2</object-name>
+   <property>/engines/engine[1]/egt_degf</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>e3</object-name>
+  <property>/engines/engine[1]/egt_degf</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>e4</object-name>
+  <property>/engines/engine[1]/egt_degf</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>face</object-name>
+  <object-name>needle</object-name>
+<emission>
+	 <red>0.3</red>
+	 <green>0.25</green>
+	 <blue>0.2</blue>
+	 <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>	
+ </emission>
+  </animation> 
+
+ <animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>engines/engine[1]/egt_degf</property>
+  <offset-deg>-8.64</offset-deg>
+  <factor>0.15</factor>
+  <center>
+   <x-m>-0.015</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation> 
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10000</max-m>
+ </animation>
+
+</PropertyList>

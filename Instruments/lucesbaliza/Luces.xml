@@ -1,0 +1,145 @@
+<!--
+737-400 Luces Baliza 
+-->
+
+<PropertyList>
+ <path>lucesbaliza.ac</path>
+ 
+<animation>
+<type>material</type> 
+<object-name>rect</object-name>
+<object-name>rect_2</object-name>
+<object-name>base</object-name>
+<object-name>lever</object-name>
+<emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+	    <factor-prop>/controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+<type>material</type> 
+<object-name>outer1</object-name>
+ <condition>
+  <property>/instrumentation/marker-beacon/outer</property>
+  <value>true</value>
+ </condition>
+<emission>
+    <red>0.0</red>
+    <green>0.0</green>
+    <blue>0.9</blue>
+	    <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+<type>material</type> 
+<object-name>middle1</object-name>
+ <condition>
+  <property>/instrumentation/marker-beacon/middle</property>
+  <value>true</value>
+ </condition>
+<emission>
+    <red>0.9</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+	    <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+<type>material</type> 
+<object-name>inner1</object-name>
+ <condition>
+  <property>/instrumentation/marker-beacon/inner</property>
+  <value>true</value>
+ </condition>
+<emission>
+    <red>0.3</red>
+    <green>0.10</green>
+    <blue>0.2</blue>
+	    <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+<type>select</type>
+<object-name>outer1</object-name>
+  <condition>
+     <and>
+       <equals>
+	 <property>/instrumentation/marker-beacon/outer</property>
+	 <value>true</value> 
+      </equals>
+     </and>
+  </condition>
+ </animation>
+
+<animation>
+<type>select</type>
+<object-name>middle1</object-name>
+  <condition>
+     <and>
+       <equals>
+	 <property>/instrumentation/marker-beacon/middle</property>
+	 <value>true</value> 
+      </equals>
+     </and>
+  </condition>
+ </animation>
+
+<animation>
+<type>select</type>
+<object-name>inner1</object-name>
+  <condition>
+     <and>
+       <equals>
+	 <property>/instrumentation/marker-beacon/inner</property>
+	 <value>true</value> 
+      </equals>
+     </and>
+  </condition>
+ </animation>
+
+<animation>
+<type>select</type>
+<object-name>outer</object-name>
+  <condition>
+     <and>
+       <equals>
+	 <property>/instrumentation/marker-beacon/outer</property>
+	 <value>false</value> 
+      </equals>
+     </and>
+  </condition>
+ </animation>
+
+<animation>
+<type>select</type>
+<object-name>middle</object-name>
+  <condition>
+     <and>
+       <equals>
+	 <property>/instrumentation/marker-beacon/middle</property>
+	 <value>false</value> 
+      </equals>
+     </and>
+  </condition>
+ </animation>
+
+<animation>
+<type>select</type>
+<object-name>inner</object-name>
+  <condition>
+     <and>
+       <equals>
+	 <property>/instrumentation/marker-beacon/inner</property>
+	 <value>false</value> 
+      </equals>
+     </and>
+  </condition>
+ </animation>
+
+</PropertyList>

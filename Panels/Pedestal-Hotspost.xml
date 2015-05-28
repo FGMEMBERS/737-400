@@ -1,0 +1,937 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!-- This part should be the same for any 3D panel.  Customize the actions section -->
+
+<PropertyList>
+
+ <name>Pedestal Hotspost</name>
+ <background>Aircraft/737-400/Panels/transparent-bg.png</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>0</y-offset>
+
+ <instruments>
+
+  <instrument>
+   <name>Pedestal Controls</name>
+      <x>0</x>
+      <y>0</y>
+          <w>1024</w>
+          <h>1024</h>
+   <w-base>1024</w-base>
+   <h-base>1024</h-base>
+
+
+ <layers>
+  <layer>
+   <name>background</name>
+   <texture>
+     
+     <path>Aircraft/737-400/Panels/transparent-bg.png</path>
+     <x1>0.0</x1>
+     <y1>0.0</y1>
+     <x2>1.0</x2>
+     <y2>1.0</y2>
+   </texture>
+  </layer>
+ </layers>
+
+<!-- define hotspot actions below -->
+
+ <actions>
+
+<!-- Lighting -->
+
+   <action>
+     <name>Increase Flight Deck Lighting</name>
+     <button>0</button>
+     <x>250</x>
+     <y>-51</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/controls/lighting/panel-norm</property>
+       <step>0.1</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>false</wrap>
+     </binding>
+   </action>
+         
+  <action>
+     <name>Decrease Flight Deck Lighting</name>
+     <button>0</button>
+     <x>223</x>
+     <y>-51</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/controls/lighting/panel-norm</property>
+       <step>-0.1</step>
+       <min>0</min>
+       <max>1</max>
+       <wrap>false</wrap>
+	 </binding>
+   </action>
+
+<!-- COMM 1 -->
+
+ <action>
+     <name>Increase COMM1 Active x10</name>
+     <button>1</button>
+     <x>-015</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm/frequencies/selected-mhz</property>
+       <step>1.0</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+     <action>
+     <name>Decrease COMM1 Active x10</name>
+     <button>1</button>
+     <x>-042</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm/frequencies/selected-mhz</property>
+       <step>-1.0</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+
+ <action>
+     <name>Increase COMM1 Active</name>
+     <button>0</button>
+     <x>-015</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm/frequencies/selected-mhz</property>
+       <step>0.025</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+     <action>
+     <name>Decrease COMM1 Active</name>
+     <button>0</button>
+     <x>-042</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm/frequencies/selected-mhz</property>
+       <step>-0.025</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+     <action>
+     <name>Swap COMM1</name>
+     <button>0</button>
+     <x>015</x>
+     <y>130</y>
+     <w>10</w>
+     <h>5</h>
+   <binding>
+    <command>property-swap</command>
+    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <property>/instrumentation/comm[0]/frequencies/standby-mhz</property>
+   </binding>
+   </action>
+
+  <action>
+     <name>Increase COMM1 Standby</name>
+     <button>0</button>
+     <x>093</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm/frequencies/standby-mhz</property>
+       <step>0.025</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+     <action>
+     <name>Decrease COMM1 Standby</name>
+     <button>0</button>
+     <x>066</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm/frequencies/standby-mhz</property>
+       <step>-0.025</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+
+     <action>
+     <name>Increase COMM1 Standby x10</name>
+     <button>1</button>
+     <x>093</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm/frequencies/standby-mhz</property>
+       <step>1.0</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+     <action>
+     <name>Decrease COMM1 Standby x10</name>
+     <button>1</button>
+     <x>066</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm/frequencies/standby-mhz</property>
+       <step>-1.0</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+<!-- NAV 1 -->
+
+  <action>
+     <name>Swap NAV1</name>
+     <button>0</button>
+     <x>053</x>
+     <y>104</y>
+     <w>10</w>
+     <h>5</h>
+   <binding>
+    <command>property-swap</command>
+    <property>/instrumentation/nav[0]/frequencies/selected-mhz</property>
+    <property>/instrumentation/nav[0]/frequencies/standby-mhz</property>
+   </binding>
+  </action>
+
+ <action>
+     <name>Increase NAV1 Active x10</name>
+     <button>1</button>
+     <x>036</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav/frequencies/selected-mhz</property>
+       <step>1.0</step>
+       <min>108.00</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+   <action>
+     <name>Decrease NAV1 Active x10</name>
+     <button>1</button>
+     <x>009</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav/frequencies/selected-mhz</property>
+       <step>-1.0</step>
+       <min>108.05</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+
+ <action>
+     <name>Increase NAV1 Active</name>
+     <button>0</button>
+     <x>036</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav/frequencies/selected-mhz</property>
+       <step>0.05</step>
+       <min>108.00</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+   <action>
+     <name>Decrease NAV1 Active</name>
+     <button>0</button>
+     <x>009</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav/frequencies/selected-mhz</property>
+       <step>-0.05</step>
+       <min>108.05</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+   <action>
+     <name>Increase NAV1 Standby x10</name>
+     <button>1</button>
+     <x>137</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav/frequencies/standby-mhz</property>
+       <step>1.0</step>
+       <min>108.05</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+   <action>
+     <name>Decrease NAV1 Standby x10</name>
+     <button>1</button>
+     <x>110</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav/frequencies/standby-mhz</property>
+       <step>-1.0</step>
+       <min>108.00</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+
+<action>
+     <name>Increase NAV1 Standby</name>
+     <button>0</button>
+     <x>137</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav/frequencies/standby-mhz</property>
+       <step>0.05</step>
+       <min>108.05</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+   <action>
+     <name>Decrease NAV1 Standby</name>
+     <button>0</button>
+     <x>110</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav/frequencies/standby-mhz</property>
+       <step>-0.05</step>
+       <min>108.00</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+
+<!-- ADF 1 -->
+
+  <action>
+     <name>Increase ADF1 Active x10</name>
+     <button>1</button>
+     <x>311</x>
+     <y>025</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/adf/frequencies/selected-khz</property>
+       <step>10.0</step>
+       <min>100</min>
+       <max>1799</max>
+       <wrap>false</wrap>
+	 </binding>
+   </action>
+
+   <action>
+     <name>Decrease ADF1 Active x10</name>
+     <button>1</button>
+     <x>284</x>
+     <y>025</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/adf/frequencies/selected-khz</property>
+       <step>-10.0</step>
+       <min>100</min>
+       <max>1799</max>
+       <wrap>false</wrap>
+	 </binding>
+   </action>
+     
+  <action>
+     <name>Increase ADF1 Active</name>
+     <button>0</button>
+     <x>311</x>
+     <y>025</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/adf/frequencies/selected-khz</property>
+       <step>1.0</step>
+       <min>100</min>
+       <max>1799</max>
+       <wrap>false</wrap>
+	 </binding>
+   </action>
+
+   <action>
+     <name>Decrease ADF1 Active</name>
+     <button>0</button>
+     <x>284</x>
+     <y>025</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/adf/frequencies/selected-khz</property>
+       <step>-1.0</step>
+       <min>100</min>
+       <max>1799</max>
+       <wrap>false</wrap>
+	 </binding>
+   </action>
+
+<!-- ADF 2 -->
+
+  <action>
+     <name>Increase ADF2 Standby x10</name>
+     <button>1</button>
+     <x>427</x>
+     <y>024</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/adf/frequencies/standby-khz</property>
+       <step>10.0</step>
+       <min>100</min>
+       <max>500</max>
+       <wrap>false</wrap>
+	 </binding>
+   </action>
+
+   <action>
+     <name>Decrease ADF2 Standby x10</name>
+     <button>1</button>
+     <x>400</x>
+     <y>024</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/adf/frequencies/standby-khz</property>
+       <step>-10.0</step>
+       <min>100</min>
+       <max>500</max>
+       <wrap>false</wrap>
+	 </binding>
+   </action>
+
+     
+  <action>
+     <name>Increase ADF2 Standby</name>
+     <button>0</button>
+     <x>427</x>
+     <y>024</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/adf/frequencies/standby-khz</property>
+       <step>1.0</step>
+       <min>100</min>
+       <max>500</max>
+       <wrap>false</wrap>
+	 </binding>
+   </action>
+
+   <action>
+     <name>Decrease ADF2 Standby</name>
+     <button>0</button>
+     <x>400</x>
+     <y>024</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/adf/frequencies/standby-khz</property>
+       <step>-1.0</step>
+       <min>100</min>
+       <max>500</max>
+       <wrap>false</wrap>
+	 </binding>
+   </action>
+
+<!-- COMM 2 -->
+
+ <action>
+     <name>Swap COMM2</name>
+     <button>0</button>
+     <x>360</x>
+     <y>130</y>
+     <w>10</w>
+     <h>5</h>
+   <binding>
+    <command>property-swap</command>
+    <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+    <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+   </binding>
+ </action>
+
+   <action>
+     <name>Increase COMM2 Active x10</name>
+     <button>1</button>
+     <x>340</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+       <step>1.0</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+     <action>
+     <name>Decrease COMM2 Active x10</name>
+     <button>1</button>
+     <x>313</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+       <step>-1.0</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+
+
+   <action>
+     <name>Increase COMM2 Active</name>
+     <button>0</button>
+     <x>340</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+       <step>0.025</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+     <action>
+     <name>Decrease COMM2 Active</name>
+     <button>0</button>
+     <x>313</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+       <step>-0.025</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+
+      <action>
+     <name>Increase COMM2 Standby x10</name>
+     <button>1</button>
+     <x>443</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+       <step>1.0</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+     <action>
+     <name>Decrease COMM2 Standby x10</name>
+     <button>1</button>
+     <x>416</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+       <step>-1.0</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+   <action>
+     <name>Increase COMM2 Standby</name>
+     <button>0</button>
+     <x>443</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+       <step>0.025</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+     <action>
+     <name>Decrease COMM2 Standby</name>
+     <button>0</button>
+     <x>416</x>
+     <y>116</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+       <step>-0.025</step>
+       <min>118.00</min>
+       <max>136.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+
+<!-- NAV 2 -->
+
+ <action>
+     <name>Swap NAV2</name>
+     <button>0</button>
+     <x>407</x>
+     <y>104</y>
+     <w>10</w>
+     <h>5</h>
+   <binding>
+    <command>property-swap</command>
+    <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+    <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+   </binding>
+ </action>
+
+ <action>
+     <name>Increase NAV2 Active</name>
+     <button>0</button>
+     <x>399</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+       <step>0.05</step>
+       <min>108.00</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+   <action>
+     <name>Decrease NAV2 Active</name>
+     <button>0</button>
+     <x>372</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav[1]/frequencies/selected-mhz</property>
+       <step>-0.05</step>
+       <min>108.00</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+
+<action>
+     <name>Increase NAV2 Standby</name>
+     <button>0</button>
+     <x>498</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+       <step>0.05</step>
+       <min>108.00</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+   <action>
+     <name>Decrease NAV2 Standby</name>
+     <button>0</button>
+     <x>471</x>
+     <y>090</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/nav[1]/frequencies/standby-mhz</property>
+       <step>-0.05</step>
+       <min>108.00</min>
+       <max>117.00</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+   <!--Transponder-->
+   
+   <action>
+     <name>Increase Squhawk 1 x10</name>
+     <button>1</button>
+     <x>293</x>
+     <y>050</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/transponder/id-code</property>
+       <step>1000.0</step>
+       <min>0</min>
+       <max>9999</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+      <action>
+     <name>Increase Squhawk 1</name>
+     <button>0</button>
+     <x>293</x>
+     <y>050</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/transponder/id-code</property>
+       <step>100.0</step>
+       <min>0</min>
+       <max>9999</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+      <action>
+     <name>Decrease Squhawk 1 x10</name>
+     <button>1</button>
+     <x>267</x>
+     <y>050</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/transponder/id-code</property>
+       <step>-1000.0</step>
+       <min>0</min>
+       <max>9999</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+      <action>
+     <name>Decrease Squhawk 1</name>
+     <button>0</button>
+     <x>267</x>
+     <y>050</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/transponder/id-code</property>
+       <step>-100.0</step>
+       <min>0</min>
+       <max>9999</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+      <action>
+     <name>Increase Squhawk 2 x10</name>
+     <button>1</button>
+     <x>363</x>
+     <y>050</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/transponder/id-code</property>
+       <step>10.0</step>
+       <min>0</min>
+       <max>9999</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+      <action>
+     <name>Increase Squhawk 2</name>
+     <button>0</button>
+     <x>363</x>
+     <y>050</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/transponder/id-code</property>
+       <step>1.0</step>
+       <min>0</min>
+       <max>9999</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+      <action>
+     <name>Decrease Squhawk 2 x10</name>
+     <button>1</button>
+     <x>337</x>
+     <y>050</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/transponder/id-code</property>
+       <step>-10.0</step>
+       <min>0</min>
+       <max>9999</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+   
+      <action>
+     <name>Decrease Squhawk 2</name>
+     <button>0</button>
+     <x>337</x>
+     <y>050</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-adjust</command>
+       <property>/instrumentation/transponder/id-code</property>
+       <step>-1.0</step>
+       <min>0</min>
+       <max>9999</max>
+       <wrap>true</wrap>
+	 </binding>
+   </action>
+ 
+ <!--TA/RA-->
+   
+    <action>
+     <name>TA/RA</name>
+     <button>0</button>
+     <x>370</x>
+     <y>060</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-assign</command>
+       <property>/instrumentation/transponder/ta-ra</property>
+       <value>1</value>
+     </binding>
+   </action>
+   
+      <action>
+     <name>TCAS OFF</name>
+     <button>0</button>
+     <x>343</x>
+     <y>060</y>
+     <w>25</w>
+     <h>10</h>
+     <binding>
+       <command>property-assign</command>
+       <property>/instrumentation/transponder/ta-ra</property>
+       <value>0</value>
+     </binding>
+   </action>
+
+   </actions>
+  </instrument>
+
+ </instruments>
+
+</PropertyList>
+
+

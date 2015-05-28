@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>empty.ac</path>
+
+ <animation>
+        <type>material</type>
+        <object-name>Face</object-name>
+        <object-name>bezelinside</object-name>
+ <emission>
+	 <red>0.3</red>
+	 <green>0.25</green>
+	 <blue>0.2</blue>
+	 <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>	
+ </emission>
+</animation>
+
+</PropertyList>
+
+

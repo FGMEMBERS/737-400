@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>eicas.ac</path>
+ 
+<animation>
+<type>material</type> 
+<object-name>box1</object-name>
+<object-name>box2</object-name>
+<object-name>box3</object-name>
+<object-name>box4</object-name>
+<object-name>box5</object-name>
+<object-name>box6</object-name>
+<object-name>1</object-name>
+<object-name>2</object-name>
+<object-name>rect</object-name>
+<object-name>disk</object-name>
+<object-name>disk2</object-name>
+<emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+	    <factor-prop>/controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+<!-- Oil Pressure -->
+
+<animation>
+	 <type>select</type>
+       <object-name>LOW OIL_on1</object-name>
+       <object-name>PRESSURE_on1</object-name>
+       <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <less-than-equals>
+				 <property>/engines/engine[0]/oil-pressure-psi</property>
+				 <value>15.00</value>
+			 </less-than-equals>
+		 </and>
+	 </condition>
+ </animation>
+
+<animation>
+	 <type>select</type>
+       <object-name>LOW OIL_on_2</object-name>
+       <object-name>PRESSURE_on2</object-name>
+       <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <less-than-equals>
+				 <property>/engines/engine[1]/oil-pressure-psi</property>
+				 <value>15.00</value>
+			 </less-than-equals>
+		 </and>
+	 </condition>
+ </animation>
+
+<!-- Start Valve Open -->
+
+<animation>
+	 <type>select</type>
+       <object-name>START_on_1</object-name>
+       <object-name>VALVE OPEN_on_1</object-name>
+        <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+                   <equals>
+				 <property>controls/engines/engine[1]/starter</property>
+				 <value>true</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+
+<animation>
+	 <type>select</type>
+       <object-name>START_on_2</object-name>
+       <object-name>VALVE OPEN_on_2</object-name>
+        <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+                   <equals>
+				 <property>controls/engines/engine[0]/starter</property>
+				 <value>true</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+
+<!-- LoD -->
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>100</max-m>
+</animation>
+
+</PropertyList>

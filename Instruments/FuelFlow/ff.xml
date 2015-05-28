@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>ff.ac</path>
+
+<animation>
+  <type>select</type>
+  <object-name>f1</object-name>
+   <condition>
+   <and>
+    <greater-than-equals>
+     <property>/engines/engine[0]/fuel-flow_pph</property>
+     <value>10000</value>
+    </greater-than-equals>
+   </and>
+   </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>f2</object-name>
+   <condition>
+   <and>
+    <greater-than-equals>
+     <property>/engines/engine[0]/fuel-flow_pph</property>
+     <value>1000</value>
+    </greater-than-equals>
+   </and>
+   </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>f3</object-name>
+   <condition>
+   <and>
+    <greater-than-equals>
+     <property>/engines/engine[0]/fuel-flow_pph</property>
+     <value>100</value>
+    </greater-than-equals>
+   </and>
+   </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>f4</object-name>
+   <condition>
+   <and>
+    <greater-than-equals>
+     <property>/engines/engine[0]/fuel-flow_pph</property>
+     <value>10</value>
+    </greater-than-equals>
+   </and>
+   </condition>
+ </animation>
+
+<animation>
+   <type>textranslate</type>
+   <object-name>f1</object-name>
+   <property>/engines/engine[0]/fuel-flow_pph</property>
+   <factor>0.00001</factor>
+   <step>10000</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+	
+<animation>
+   <type>textranslate</type>
+   <object-name>f2</object-name>
+   <property>/engines/engine[0]/fuel-flow_pph</property>
+   <factor>0.0001</factor>
+   <step>1000</step>
+   <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+   </axis>
+</animation>
+ 
+  <animation>
+  <type>textranslate</type>
+  <object-name>f3</object-name>
+  <property>/engines/engine[0]/fuel-flow_pph</property>
+  <factor>0.001</factor>
+  <step>100</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>textranslate</type>
+  <object-name>f4</object-name>
+  <property>/engines/engine[0]/fuel-flow_pph</property>
+  <factor>0.01</factor>
+  <step>10</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>f5</object-name>
+  <property>/engines/engine[0]/fuel-flow_pph</property>
+  <factor>0.1</factor>
+  <step>1.0</step>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>engines/engine[0]/fuel-flow_pph</property>
+    <interpolation>
+    <entry>
+      <ind>0</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>4000</ind>
+      <dep>212.0</dep>
+    </entry>
+    <entry>
+      <ind>12000</ind>
+      <dep>323.0</dep>
+    </entry>
+    <entry>
+      <ind>30000</ind>
+      <dep>335.0</dep>
+    </entry>
+    </interpolation>
+    <center>
+      <x> 0</x>
+      <y> 0</y>
+      <z> 0</z>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+  <animation> 
+   <object-name>face</object-name>
+   <type>material</type>
+<emission>
+	 <red>0.3</red>
+	 <green>0.25</green>
+	 <blue>0.2</blue>
+	 <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>	
+ </emission>
+      </animation>
+
+  <animation> 
+   <object-name>needle</object-name>
+   <type>material</type>
+<emission>
+	 <red>0.3</red>
+	 <green>0.25</green>
+	 <blue>0.2</blue>
+	 <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>	
+ </emission>
+      </animation>
+
+
+</PropertyList>

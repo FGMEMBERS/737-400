@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <name>fuel734</name> <!-- fuel734 -->
+ <width>400</width> <!-- 620 y 430 -->
+ <height>250</height>
+ <modal>false</modal>
+
+ <text>
+  <x>200</x>
+  <y>200</y>
+  <label>Fuel Tanks</label>
+ </text>
+
+ <group>
+  <x>10</x>
+  <y>40</y>
+
+  <text>
+   <x>30</x>
+   <y>160</y>
+   <label>Fuel Load</label>
+  </text>
+
+  <input>
+   <name>lw</name>
+   <x>0</x>
+   <y>140</y>
+   <width>100</width>
+   <height>25</height>
+   <label>Left Wing (492 gallons max.)</label>
+   <property>/consumables/fuel/tank/level-gal_us</property>
+   <binding>
+    <command>dialog-apply</command>
+    <object-name>lw</object-name>
+   </binding>
+   <binding>
+    <command>dialog-update</command>
+   </binding>
+  </input>
+
+  <input>
+   <name>rw</name>
+   <x>0</x>
+   <y>110</y>
+   <width>100</width>
+   <height>25</height>
+   <label>Right Wing (492 gallons max.)</label>
+   <property>/consumables/fuel/tank[1]/level-gal_us</property>
+   <binding>
+    <command>dialog-apply</command>
+    <object-name>rw</object-name>
+   </binding>
+   <binding>
+    <command>dialog-update</command>
+   </binding>
+  </input>
+
+  <input>
+   <name>ct</name>
+   <x>0</x>
+   <y>80</y>
+   <width>100</width>
+   <height>25</height>
+   <label>Center Tank(5311 gallons max.)</label>
+   <property>/consumables/fuel/tank[2]/level-gal_us</property>
+   <binding>
+    <command>dialog-apply</command>
+    <object-name>ct</object-name>
+   </binding>
+   <binding>
+    <command>dialog-update</command>
+   </binding>
+  </input>
+
+ </group>
+
+ <button>
+  <x>170</x>
+  <y>10</y>
+  <legend>Close</legend>
+  <default>true</default>
+  <key>Esc</key>
+  <binding>
+   <command>dialog-close</command>
+  </binding>
+ </button>
+
+</PropertyList>

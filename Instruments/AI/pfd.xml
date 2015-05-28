@@ -1,0 +1,1454 @@
+<!--
+737-400 pfd Taken from 787-8 pfd
+-->
+
+<PropertyList>
+
+ <path>pfd.ac</path>
+
+<animation>
+<type>material</type> 
+<object-name>bezel</object-name>
+<emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+	    <factor-prop>/controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>APspeed</object-name>
+    <object-name>AIroll</object-name>
+    <object-name>APlnav</object-name>
+    <object-name>APvnav</object-name>
+    <object-name>dmetxt</object-name>
+    <object-name>hdgmode</object-name>
+    <object-name>mach</object-name>
+    <object-name>pointer</object-name>
+    <object-name>PFDscreen</object-name>
+	<object-name>AIroll</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+ 
+    <animation>
+   <type>select</type>
+   <object-name>Asitext.001</object-name>
+    <object-name>Asitext.002</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <greater-than-equals>
+   <property>/velocities/airspeed-kt</property>
+   <value>45</value>
+   </greater-than-equals>
+   </and>
+  </condition>
+ </animation>
+ 
+  <animation>
+   <type>select</type>
+   <object-name>IASquieto45</object-name>
+    <object-name>IASquieto452</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <less-than>
+   <property>/velocities/airspeed-kt</property>
+   <value>45</value>
+   </less-than>
+   </and>
+  </condition>
+ </animation>
+ 
+  <!--Groundspeed-->
+ 
+ <animation>
+<type>select</type>
+<object-name>gskt2</object-name>
+<condition>
+<greater-than-equals>
+   <property>/velocities/groundspeed-kt</property>
+   <value>10</value>
+   </greater-than-equals>
+</condition>
+ </animation>
+ 
+  <animation>
+<type>select</type>
+<object-name>gskt1</object-name>
+<condition>
+<greater-than-equals>
+   <property>/velocities/groundspeed-kt</property>
+   <value>100</value>
+   </greater-than-equals>
+</condition>
+ </animation>
+ 
+   <animation>
+   <type>textranslate</type>
+   <object-name>gskt1</object-name>
+   <property>/velocities/groundspeed-kt</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+    <animation>
+   <type>textranslate</type>
+   <object-name>gskt2</object-name>
+   <property>/velocities/groundspeed-kt</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+    <animation>
+   <type>textranslate</type>
+   <object-name>gskt3</object-name>
+   <property>/velocities/groundspeed-kt</property>
+   <factor>0.1</factor>
+   <step>1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+<animation>
+   <type>select</type>
+   <object-name>fd.annun</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/instrumentation/flightdirector/fd-on</property>
+         <value>1</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+  <animation>
+   <type>select</type>
+   <object-name>APspeed</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/autopilot/locks/speed</property>
+         <value>speed-with-throttle</value>
+       </equals>
+	   <equals>
+         <property>/autopilot/locks/vnav</property>
+         <value>0</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>APhdg</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/autopilot/locks/heading</property>
+         <value>dg-heading-hold</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+  <animation>
+   <type>select</type>
+   <object-name>APlnav</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/autopilot/locks/heading</property>
+         <value>true-heading-hold</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+ <!-- V/S Indicators Select -->
+ 
+   <animation>
+   <type>select</type>
+   <object-name>APgs</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/autopilot/locks/heading</property>
+         <value>nav1-hold</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+    <animation>
+   <type>select</type>
+   <object-name>APapp</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/autopilot/locks/altitude</property>
+         <value>gs1-hold</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+     <animation>
+   <type>select</type>
+   <object-name>APvs</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/autopilot/locks/altitude</property>
+         <value>vertical-speed-hold</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+      <animation>
+   <type>select</type>
+   <object-name>APfmcspd</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/autopilot/locks/vnav</property>
+         <value>1</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+     <animation>
+   <type>select</type>
+   <object-name>APvnav</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/autopilot/locks/altitude</property>
+         <value>altitude-hold</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>FDbars</object-name>
+   <condition>
+   <and>
+       <equals>
+         <property>/instrumentation/flightdirector/fd-on</property>
+         <value>1</value>
+       </equals>
+	 <or>
+    <equals>
+    <property>autopilot/locks/altitude</property>
+     <value>altitude-hold</value>
+    </equals>	  
+	<equals>
+	<property>autopilot/locks/altitude</property>
+	<value>vertical-speed-hold</value>
+	</equals>
+   <equals>
+     <property>/autopilot/locks/heading</property>
+     <value>gs1-hold</value>
+   </equals>
+	</or>
+	</and>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>FDbars_2</object-name>
+   <condition>
+   <and>
+       <equals>
+         <property>/instrumentation/flightdirector/fd-on</property>
+         <value>1</value>
+       </equals>
+	<or>
+    <equals>
+    <property>autopilot/locks/heading</property>
+     <value>true-heading-hold</value>
+    </equals>	  
+	<equals>
+	<property>autopilot/locks/heading</property>
+	<value>dg-heading-hold</value>
+	</equals>
+   <equals>
+     <property>/autopilot/locks/heading</property>
+     <value>nav1-hold</value>
+   </equals>
+	</or>
+	</and>
+   </condition>
+ </animation>
+ 
+<animation>
+   <type>select</type>
+   <object-name>ap.annun</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+       <equals>
+         <property>/instrumentation/flightdirector/autopilot-on</property>
+         <value>1</value>
+       </equals>
+   </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>GSscale</object-name>
+   <condition>
+     <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
+         <property>/instrumentation/nav/has-gs</property>
+         <property>/instrumentation/nav/in-range</property>
+     </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>GSneedle</object-name>
+   <condition>
+     <and>
+      <equals>
+       <property>sim/current-view/view-number</property>
+       <value>0</value>
+      </equals>
+         <property>/instrumentation/nav/has-gs</property>
+         <property>/instrumentation/nav/in-range</property>
+     </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>GSneedle</object-name>
+   <property>/instrumentation/nav/gs-needle-deflection</property>
+<interpolation>
+     <entry>
+       <ind> -10.0</ind>
+       <dep>-0.0308</dep>
+     </entry>
+     <entry>
+       <ind> 0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind> 10.0</ind>
+       <dep>0.0308</dep>
+     </entry>
+</interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+   <type>select</type>
+   <object-name>Omarker</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+     <equals>
+       <property>/instrumentation/marker-beacon/outer</property>
+       <value>true</value>
+     </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>Mmarker</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+     <equals>
+       <property>/instrumentation/marker-beacon/middle</property>
+       <value>true</value>
+     </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>Imarker</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+     <equals>
+       <property>/instrumentation/marker-beacon/inner</property>
+       <value>true</value>
+     </equals>
+   </and>
+   </condition>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>LOCscale</object-name>
+   <condition>
+     <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+         <property>/instrumentation/nav/nav-loc</property>
+         <property>/instrumentation/nav/in-range</property>
+     </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>LOCneedle</object-name>
+   <condition>
+     <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+         <property>/instrumentation/nav/nav-loc</property>
+         <property>/instrumentation/nav/in-range</property>
+     </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>LOCneedle</object-name>
+   <property>/instrumentation/nav/heading-needle-deflection</property>
+<interpolation>
+     <entry>
+       <ind> -10.0</ind>
+       <dep>-0.0253</dep>
+     </entry>
+     <entry>
+       <ind> 0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind> 10.0</ind>
+       <dep>0.0253</dep>
+     </entry>
+</interpolation> 
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>pfdhdg</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>pfdhdg</object-name>
+   <property>autopilot/internal/fdm-heading-bug-error-deg</property>
+   <interpolation>
+     <entry>
+       <ind> -180.0</ind>
+       <dep>-50.0</dep>
+     </entry>
+     <entry>
+       <ind>-50.0</ind>
+       <dep>-50.0</dep>
+     </entry>
+     <entry>
+       <ind> 0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind> 50.0</ind>
+       <dep>50.0</dep>
+     </entry>
+     <entry>
+       <ind>180.0</ind>
+       <dep>50.0</dep>
+     </entry>
+   </interpolation>
+<axis>
+     <x>-1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0.007</x-m>
+     <y-m>-0.013</y-m>
+     <z-m>-0.135</z-m>
+   </center>
+ </animation>
+
+  <animation>
+   <type>translate</type>
+   <object-name>FDbars_2</object-name>
+<factor>0.0007</factor>
+   <property>/instrumentation/flightdirector/vbar-roll</property>
+   <axis>
+     <x>0.0</x>
+     <y>1.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0.007</x-m>
+     <y-m>-0.014</y-m>
+     <z-m>0.005</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>translate</type>
+   <object-name>FDbars</object-name>
+   <property>/instrumentation/flightdirector/vbar-pitch</property>
+<factor>0.00014</factor>
+<axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>-1.0</z>
+   </axis>
+   <center>
+     <x-m>0.007</x-m>
+     <y-m>-0.014</y-m>
+     <z-m>0.005</z-m>
+   </center>
+ </animation>
+ 
+ <animation>
+   <type>select</type>
+   <object-name>AI</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>texmultiple</type>
+   <object-name>AI</object-name>
+   <transform>
+     <property>/orientation/pitch-deg</property>
+     <subtype>textranslate</subtype>
+     <factor>0.00314</factor>
+     <axis>
+       <x>0</x>
+       <y>1</y>
+       <z>0</z>
+     </axis>
+   </transform>
+   <transform>
+     <property>/orientation/roll-deg</property>
+     <subtype>texrotate</subtype>
+     <center>
+       <x>0.25</x>
+       <y>0.50</y>
+     </center>
+     <axis>
+       <x>0</x>
+       <y>0</y>
+       <z>-1</z>
+     </axis>
+   </transform>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>rollptr</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>rotate</type>
+   <object-name>rollptr</object-name>
+   <property>/orientation/roll-deg</property>
+   <axis>
+     <x>1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0.0</x-m>
+     <y-m>-0.014</y-m>
+     <z-m>0.005</z-m>
+   </center>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>HDGface</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>texrotate</type>
+   <object-name>HDGface</object-name>
+   <property>/orientation/heading-magnetic-deg</property>
+   <center>
+     <x>0.75</x>
+     <y>0.75</y>
+     <z>0.0</z>
+   </center>
+   <axis>
+     <x>0</x>
+     <y>0</y>
+     <z>-1</z>
+   </axis>
+ </animation>
+<!-- 
+  <animation>
+   <type>rotate</type>
+   <object-name>hdgbug</object-name>
+   <property>/autopilot/internal/fdm-heading-bug-error-deg</property>
+   <axis>
+     <x>-1.0</x>
+     <y>0.0</y>
+     <z>0.0</z>
+   </axis>
+   <center>
+     <x-m>0.002</x-m>
+     <y-m>0</y-m>
+     <z-m>-0.040</z-m>
+   </center>
+ </animation>
+ 
+  <animation>
+   <type>translate</type>
+   <object-name>GSneedle</object-name>
+   <property>/instrumentation/nav/gs-needle-deflection</property>
+   <interpolation>
+     <entry>
+       <ind>-10.0</ind>
+       <dep>-0.0160</dep>
+     </entry>
+     <entry>
+       <ind>0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind>10.0</ind>
+       <dep>0.0160</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x>0.0</x>
+     <y>0.0</y>
+     <z>1.0</z>
+   </axis>
+ </animation>
+-->
+
+ <animation>
+   <type>select</type>
+   <object-name>ASIribbon</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>ASIribbon</object-name>
+   <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind> 100.0</ind>
+       <dep>0.1490</dep>
+     </entry>
+     <entry>
+       <ind> 200.0</ind>
+       <dep>0.2980</dep>
+     </entry>
+     <entry>
+       <ind> 300.0</ind>
+       <dep>0.4455</dep>
+     </entry>
+     <entry>
+       <ind> 400.0</ind>
+       <dep>0.5945</dep>
+     </entry>
+     <entry>
+       <ind> 500.0</ind>
+       <dep>0.7425</dep>
+     </entry>
+     <entry>
+       <ind> 600.0</ind>
+       <dep>0.8890</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+  <animation>
+   <type>select</type>
+   <object-name>ASIribbon2</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+     <greater-than-equals>
+   <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <value>45</value>
+   </greater-than-equals>
+   </and>
+  </condition>
+ </animation>
+
+   <animation>
+   <type>select</type>
+   <object-name>ASIribbon2quieto</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  <less-than-equals>
+   <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <value>45</value>
+   </less-than-equals>
+   </and>
+  </condition>
+ </animation>
+
+ 
+  <animation>
+   <type>textranslate</type>
+   <object-name>ASIribbon2</object-name>
+   <property>/autopilot/settings/target-speed-kt</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind> 100.0</ind>
+       <dep>0.1490</dep>
+     </entry>
+     <entry>
+       <ind> 200.0</ind>
+       <dep>0.2980</dep>
+     </entry>
+     <entry>
+       <ind> 300.0</ind>
+       <dep>0.4455</dep>
+     </entry>
+     <entry>
+       <ind> 400.0</ind>
+       <dep>0.5945</dep>
+     </entry>
+     <entry>
+       <ind> 500.0</ind>
+       <dep>0.7425</dep>
+     </entry>
+     <entry>
+       <ind> 600.0</ind>
+       <dep>0.8890</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x>0</x>
+     <y>-1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>ASIribbon2</object-name>
+   <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <interpolation>
+     <entry>
+       <ind> 0.0</ind>
+       <dep>0.0</dep>
+     </entry>
+     <entry>
+       <ind> 100.0</ind>
+       <dep>0.1490</dep>
+     </entry>
+     <entry>
+       <ind> 200.0</ind>
+       <dep>0.2980</dep>
+     </entry>
+     <entry>
+       <ind> 300.0</ind>
+       <dep>0.4455</dep>
+     </entry>
+     <entry>
+       <ind> 400.0</ind>
+       <dep>0.5945</dep>
+     </entry>
+     <entry>
+       <ind> 500.0</ind>
+       <dep>0.7425</dep>
+     </entry>
+     <entry>
+       <ind> 600.0</ind>
+       <dep>0.8890</dep>
+     </entry>
+   </interpolation>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>Asitext</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <greater-than-equals>
+   <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <value>100</value>
+   </greater-than-equals>
+   </and>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>Asitext</object-name>
+   <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <scroll>1</scroll>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>Asitext.001</object-name>
+   <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <scroll>1</scroll>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>Asitext.002</object-name>
+   <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+   <factor>0.1</factor>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>pitch</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>pitch.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>pitch.001</object-name>
+   <property>/orientation/pitch-deg</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>pitch.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>pitch.002</object-name>
+   <property>/orientation/pitch-deg</property>
+   <factor>0.1</factor>
+   <step>1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>pitch.003</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <less-than>
+    <property>/orientation/pitch-deg</property>
+    <value>0.0</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>pitch.003</object-name>
+   <property>/orientation/pitch-deg</property>
+   <factor>-0.01</factor>
+   <step>10</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>pitch.004</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <less-than>
+    <property>/orientation/pitch-deg</property>
+    <value>0.0</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>textranslate</type>
+   <object-name>pitch.004</object-name>
+   <property>/orientation/pitch-deg</property>
+   <factor>-0.1</factor>
+   <step>1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>pitch.005</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <less-than>   
+    <property>/orientation/pitch-deg</property>
+    <value>0.0</value>
+   </less-than>
+   </and>
+   </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>bugtxt</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>bugtxt</object-name>
+   <property>/autopilot/settings/heading-bug-deg</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>bugtxt.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>bugtxt.001</object-name>
+   <property>/autopilot/settings/heading-bug-deg</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>bugtxt.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>bugtxt.002</object-name>
+   <property>/autopilot/settings/heading-bug-deg</property>
+   <factor>0.1</factor>
+   <step>1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+ 
+ <!-- Indicadores de Mach e IAS programado -->
+ 
+ <animation>
+   <type>select</type>
+   <object-name>iastext</object-name>
+   <object-name>iastext.001</object-name>
+   <object-name>iastext.002</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <equals>
+   <property>/instrumentation/flightdirector/mach-mode</property>
+    <value>0</value>
+   </equals>
+   </and>
+  </condition>
+ </animation>
+ 
+  <animation>
+   <type>select</type>
+   <object-name>machtext.001</object-name>
+   <object-name>machtext.002</object-name>
+   <object-name>machdot</object-name>
+   <condition>
+   <and>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+   <equals>
+   <property>/instrumentation/flightdirector/mach-mode</property>
+    <value>1</value>
+   </equals>
+   </and>
+  </condition>
+ </animation>
+ 
+  <animation>
+   <type>textranslate</type>
+   <object-name>iastext</object-name>
+   <property>/autopilot/settings/target-speed-kt</property>
+   <factor>0.001</factor>
+   <step>100</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>iastext.001</object-name>
+   <property>/autopilot/settings/target-speed-kt</property>
+   <factor>0.01</factor>
+   <step>10</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>iastext.002</object-name>
+   <property>/autopilot/settings/target-speed-kt</property>
+   <factor>0.1</factor>
+   <step>1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>machtext.001</object-name>
+   <property>/autopilot/settings/target-speed-mach</property>
+   <factor>1</factor>
+   <step>0.1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>machtext.002</object-name>
+   <property>/autopilot/settings/target-speed-mach</property>
+   <factor>10</factor>
+   <step>.01</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <!--  Mach -->
+ 
+ <animation>
+   <type>select</type>
+   <object-name>mach.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>mach.001</object-name>
+   <property>/velocities/mach</property>
+   <factor>1.0</factor>
+   <step>0.1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>mach.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>mach.002</object-name>
+   <property>/velocities/mach</property>
+   <factor>10.0</factor>
+   <step>0.01</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>mach.003</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>mach.003</object-name>
+   <property>/velocities/mach</property>
+   <factor>100.0</factor>
+   <step>0.001</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>dmetxt.001</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>dmetxt.001</object-name>
+   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <factor>0.001</factor>
+   <step>100.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>dmetxt.002</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>dmetxt.002</object-name>
+   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <factor>0.01</factor>
+   <step>10.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>dmetxt.003</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>dmetxt.003</object-name>
+   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <factor>0.1</factor>
+   <step>1.0</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>dmetxt.004</object-name>
+   <condition>
+   <equals>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </equals>
+  </condition>
+ </animation>
+
+  <animation>
+   <type>textranslate</type>
+   <object-name>dmetxt.004</object-name>
+   <property>/instrumentation/dme/indicated-distance-nm</property>
+   <factor>1.0</factor>
+   <step>0.1</step>
+   <axis>
+     <x>0</x>
+     <y>1</y>
+     <z>0</z>
+   </axis>
+ </animation>
+
+</PropertyList>

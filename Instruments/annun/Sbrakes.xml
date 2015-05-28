@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>Sbrakes.ac</path>
+ 
+<animation>
+<type>material</type> 
+<object-name>box</object-name>
+<object-name>box1</object-name>
+<emission>
+    <red>0.1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+	    <factor-prop>/controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>ARMED1</object-name>
+  <object-name>SPEED1</object-name>
+  <object-name>BRAKE1</object-name>
+  <emission>
+     <red>0</red>
+     <green>5.0</green>
+     <blue>0</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation>  
+
+<animation>
+	 <type>select</type>
+       <object-name>ARMED1</object-name>
+       <object-name>SPEED1</object-name>
+       <object-name>BRAKE1</object-name>
+       <condition>
+		 <and>
+			 <equals>
+				 <property>sim/current-view/view-number</property>
+				 <value>0</value>
+			 </equals>
+			 <equals>
+				 <property>/controls/flight/speedbrake</property>
+				 <value>1</value>
+			 </equals>
+		 </and>
+	 </condition>
+ </animation>
+
+<!-- LoD -->
+<animation>
+ <type>range</type>
+ <min-m>0</min-m>
+ <max-m>1000</max-m>
+</animation>
+
+</PropertyList>

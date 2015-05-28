@@ -1,0 +1,563 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <sim>
+
+  <description>Boeing 737-400 3D Cockpit and Panel</description>
+  <author>David Culp, Innis Cunningham, FlightGear Iespana Team</author>
+  <status>In-Development</status>
+
+  <flight-model>jsb</flight-model>
+  <aero>737-400</aero>
+  <fuel-fraction>1.0</fuel-fraction>
+
+<systems>
+ <autopilot>
+  <path>Aircraft/737-400/Systems/734-autopilot.xml</path>
+ </autopilot>
+ <electrical>
+  <path>Aircraft/737-400/Systems/electrical.xml</path>
+ </electrical>
+  <system>
+    <path>Aircraft/Generic/generic-systems.xml</path>
+   </system>
+</systems>
+
+  <startup>
+   <splash-texture>Aircraft/737-400/splash.png</splash-texture>
+  </startup>
+
+  <sound>
+   <path>Aircraft/737-400/Sounds/737-sound.xml</path>
+  </sound>
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+  <panel>
+   <visibility>false</visibility>
+  </panel>
+
+<instrumentation>
+<path>Aircraft/737-400/Systems/instrumentation.xml</path>
+</instrumentation>
+  
+  <model>
+   <path>Aircraft/737-400/Models/737-400.xml</path>
+     <livery>
+  <file type="string"/>
+ </livery>
+  </model>
+       
+   <view n="0">
+   <internal archive="y">true</internal>
+  <name>Pilot View</name>
+   <config>
+     <!-- x/y/z == right/up/back -->
+     <x-offset-m archive="y">-0.5</x-offset-m>
+     <y-offset-m archive="y">1.59</y-offset-m>
+     <z-offset-m archive="y">-7.25</z-offset-m>
+     <pitch-offset-deg archive="y">-8.0</pitch-offset-deg>
+   </config>
+  </view>
+
+  <view n="1">
+   <config>
+     <!-- big plane, so extend chase view offset a bit -->
+     <z-offset-m type="double" archive="y">-70.0</z-offset-m>
+   </config>
+  </view>
+ 
+  <view n="100">
+    <name>Wing View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+      <pitch-offset-deg>-8.0</pitch-offset-deg>
+      <heading-offset-deg type="double">90</heading-offset-deg> <!-- parallel to the panel -->
+      <x-offset-m archive="y"> -2.0 </x-offset-m> <!--Left/Right-->
+      <y-offset-m archive="y"> 1.31 </y-offset-m> <!--Up/Down-->
+      <z-offset-m archive="y"> 9.67 </z-offset-m> <!--Fdw/Back-->
+    </config>
+  </view>
+
+   <view n="101">
+    <name>Passenger View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+      <pitch-offset-deg>0.0</pitch-offset-deg>
+      <heading-offset-deg type="double">245</heading-offset-deg>
+      <x-offset-m archive="y"> 0.88 </x-offset-m> <!--Left/Right-->
+      <y-offset-m archive="y"> 1.31 </y-offset-m> <!--Up/Down-->
+      <z-offset-m archive="y"> 0.42 </z-offset-m> <!--Fdw/Back-->
+    </config>
+   </view>
+  
+  <chase-distance-m>-55</chase-distance-m>
+
+  <flaps>
+   <setting>0.000</setting>  <!-- flaps up -->
+   <setting>0.125</setting>  <!-- flaps 1  -->
+   <setting>0.250</setting>  <!-- flaps 2  -->
+   <setting>0.375</setting>  <!-- flaps 5  -->
+   <setting>0.500</setting>  <!-- flaps 10 -->
+   <setting>0.625</setting>  <!-- flaps 15 --> 
+   <setting>0.750</setting>  <!-- flaps 25 -->
+   <setting>0.875</setting>  <!-- flaps 30 -->
+   <setting>1.000</setting>  <!-- flaps 40 -->
+  </flaps>
+
+  <submodels>
+   <serviceable>true</serviceable>
+   <path>Aircraft/737-400/submodels.xml</path>
+  </submodels>
+
+<controls>
+<switches>
+<landing-lights type = "bool">0</landing-lights> 
+</switches>
+</controls>
+
+  <help>
+   <title>Boeing 737-400</title>
+   <line>Choose your favorit texture using the key above</line>
+   <line>Use AutoBrakes to stop the plane when you land without the manual brakes</line> 
+   <line>the plane will stop acording with the auto brakes level</line>
+   <line>Use the RTO (reject take off) when you reject or abort a take off</line>
+   <line>To Reject a take off you must set RTO before the take off or, when you are</line>
+   <line>aborting the take off, the plane will stop at 10kt, then the brake will be released</line>
+   <line>To start the plane you have to select "Engine Starter" and then when</line>
+   <line>n2 shows 25 you have to select "Engine Start", If you want to cutoff</line>
+   <line>the engine just select "Engine Start"</line>
+   <line>The SpeedBrakes are automatic, when you land they lift up automaticaly, you will</line>
+   <line>see a green light what indicate that the speedBrake is up</line>
+   <key>
+    <name>l</name>
+    <desc>Brings up the Livery Switching Dialog</desc>
+   </key>
+   <key>
+    <name>Delete</name>
+    <desc>Toogle Reverse Thrust</desc>
+   </key>
+   <key>
+    <name>Ctrl+B</name>
+    <desc>Toggle SpeedBrake</desc>
+   </key>
+  </help>
+
+<yokes-visible type="bool">1</yokes-visible>
+
+<menubar>
+<default>
+<menu n="10">
+<label>737-400</label>
+<enabled type="bool">true</enabled>
+<item>
+    <label>Select Livery</label>
+    <binding>
+     <command>nasal</command>
+     <script>aircraft.livery.dialog.toggle()</script>
+    </binding>
+   </item>
+<item>
+<label>Yokes On/Off</label>
+<binding>
+<command>property-toggle</command>
+<property>sim/yokes-visible</property>
+</binding>
+</item>
+<item>
+<label>Landing Lights On/Off</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/switches/landing-light</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+<item>
+<label>Wing-Logo Lights On/Off</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/switches/logo-lights</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+<item>
+<label>Navigation Lights On/Off</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/switches/nav-lights</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+<item>
+<label>Strobe Lights On/Off</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/lighting/strobe</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+<item>
+<label>Beacon Lights On/Off</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/lighting/beacon</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+<item>
+<label>Taxi Light On/Off</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/switches/taxi-lights</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+<item>
+<label>Right Engine Starter</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/engines/engine/starter</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+<item>
+<label>Right Engine Start</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/engines/engine/cutoff</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+<item>
+<label>Left Engine Starter</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/engines/engine[1]/starter</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+<item>
+<label>Left Engine Start</label>
+<binding>
+<command>property-toggle</command>
+<property>controls/engines/engine[1]/cutoff</property>
+</binding>
+<binding>
+<command>property-toggle</command>
+<property>/sim/sound/switch</property>
+</binding>
+</item>
+	<item>
+		<!-- CON NASAL CREO EL DIALOG QUE APUNTA AL ARCHIVO -->		
+		<label>Combustible</label>
+		<binding>
+			<command>nasal</command>
+			<script>
+	   var dlg = gui.Dialog.new("/sim/gui/dialogs/foo-config/dialog","Aircraft/737-400/Dialogs/fuel734.xml");
+			    #dlg.open();
+			    #dlg.close();
+			</script>
+		</binding>
+		<!-- CON XML EJECUTO EL DIALOG PARA QUE SE MUESTRE EN PANTALLA -->
+		<binding>			
+			<command>dialog-show</command>
+			<!--PEGOSTE -->
+			<dialog-name>fuel734</dialog-name>
+			<!--*********-->
+		</binding>
+	</item>
+
+</menu>
+</default>
+</menubar>
+ 
+<mk-viii>
+<assemblies>
+<emission>
+<red>0.5</red>
+<green>0.5</green>
+<blue>0.5</blue>
+<factor alias="/controls/lighting/instruments-norm"/>
+</emission>
+</assemblies>
+</mk-viii>
+            
+</sim>
+
+<input>
+ <keyboard>
+  <key n="108">
+   <name>l</name>
+   <desc>Show livery select dialog</desc>
+   <binding>
+   <command>nasal</command>
+  <script>livery.showModelSelectDialog()</script>
+ </binding>
+</key>
+
+ <key n="127">
+  <name>Delete</name>
+   <desc>Toggle thrust reverser.</desc>
+    <binding>
+      <command>nasal</command>
+      <script>reversethrust.togglereverser()</script>
+    </binding>
+ </key> 
+
+ <key n="50">
+  <name>2</name>
+  <desc>Decrease flaps.</desc>
+  <binding>
+   <command>nasal</command>
+   <script>controls.flapsDown(-1)</script>
+  </binding>
+  <mod-up>
+   <binding>
+    <command>nasal</command>
+    <script>controls.flapsDown(0)</script>
+   </binding>
+  </mod-up>
+ </key>
+
+ <key n="49">
+  <name>1</name>
+  <desc>Increase flaps.</desc>
+  <binding>
+   <command>nasal</command>
+   <script>controls.flapsDown(1)</script>
+  </binding>
+  <mod-up>
+   <binding>
+    <command>nasal</command>
+    <script>controls.flapsDown(0)</script>
+   </binding>
+  </mod-up>
+ </key>
+
+ </keyboard>
+ </input>
+  
+ <engines>
+  <engine n="0">
+    <running>false</running>
+  </engine>
+  <engine n="1">
+    <running>false</running>
+  </engine>
+ </engines>
+
+<controls>
+  <gear>
+    <autobrakes type="int">0</autobrakes>
+    <!-- 0=off, 1=1, 2=2, 3=3, 4=MAX, 5=RTO -->
+    <antiskid type="int">false</antiskid>
+    <brake-parking type="double">1</brake-parking>
+    <gear-off>false</gear-off>
+  </gear>
+  <flight>
+    <autospeedbrakes-armed type="string">true</autospeedbrakes-armed>
+  </flight>
+  <lighting>
+  <strobe>0</strobe>
+  <beacon>0</beacon>
+  <landing-lights>0</landing-lights>
+  <taxi-light>0</taxi-light>
+  <nav-lights>0</nav-lights>
+  <logo-lights>0</logo-lights>
+  <instruments-norm>1</instruments-norm>
+  </lighting>
+ <switches>
+ <no-smoking>0</no-smoking>
+ <logo-lights>0</logo-lights>
+ </switches>
+ <engines>
+	<engine n="0">
+		<cutoff>1</cutoff>
+	</engine>
+	<engine n="1">
+		<cutoff>1</cutoff>
+	</engine>
+ </engines>
+ </controls>
+
+ <consumables>
+  <fuel>
+   <tank n="0">
+    <level-lb type="double">10040</level-lb>
+   </tank>
+   <tank n="1">
+    <level-lb type="double">10050</level-lb>
+   </tank>
+   <tank n="2">
+    <level-lb type="double">15380</level-lb>
+   </tank>
+  </fuel>
+ </consumables>
+ 
+ <nasal>
+   <air-ground>
+    <file>Aircraft/737-400/Nasal/air-ground.nas</file>
+   </air-ground>
+   <livery>
+     <file>Aircraft/737-400/Nasal/livery.nas</file>
+   </livery>
+   <rain>
+     <file>Aircraft/737-400/Nasal/rain.nas</file>
+   </rain>
+   <radar>
+    <file>Aircraft/737-400/Nasal/radar.nas</file>
+   </radar>
+   <radionav>
+    <file>Aircraft/737-400/Nasal/radionav.nas</file>
+   </radionav>
+    <failures>
+    <file>Aircraft/737-400/Nasal/Failures.nas</file>
+   </failures>
+   <reversethrust>
+    <file>Aircraft/737-400/Nasal/reverse-thrust.nas</file>
+   </reversethrust>
+   <flightdirector>
+    <file>Aircraft/737-400/Nasal/flightdirector.nas</file>
+   </flightdirector>
+   <tcas>
+   	<file>Aircraft/737-400/Nasal/protoTCAS.nas</file>
+   </tcas>
+   <tcas>
+   	<file>Aircraft/737-400/Nasal/testing.nas</file>
+   </tcas>
+ </nasal>
+
+ <systems>
+   <autoflight>
+    <serviceable type="bool">true</serviceable>
+   </autoflight>
+ </systems>
+
+<instrumentation>
+        <mk-viii>
+            <serviceable>true</serviceable>
+            <configuration-module>
+            <category-1>1</category-1><!-- GA Fast, 150' Mode 4B -->
+            </configuration-module>
+            <inputs>
+                <arinc429>
+                <decision-height-ncd>false</decision-height-ncd>
+                <decision-height>200</decision-height>
+                </arinc429>
+            </inputs>
+        </mk-viii>
+ <wxradar>
+  <serviceable>true</serviceable>
+  <range type="int" archive="y">20</range>
+  <minimized type="bool" archive="y">false</minimized>
+  <switch archive="y">on</switch>
+  <mode archive="y">wx</mode>
+  <lightning type="bool" archive="y">true</lightning>
+  <display-mode archive="y">arc</display-mode>
+ </wxradar>
+ 	<radar>
+		<range type="int" archive="y">20</range>
+	</radar>
+<nav>
+ <radials>
+  <selected-deg type="double">000</selected-deg>
+ </radials>
+</nav>
+<transponder>
+ <id-code>1200</id-code>
+ <ta-ra>0</ta-ra>
+ </transponder>
+</instrumentation>
+
+<!-- presets for the FlightGear autoflight system MCP panel -->
+
+	<autopilot>
+		<settings>
+			<target-altitude-ft type="double">00000.000</target-altitude-ft>
+			<heading-bug-deg type="double">340.000</heading-bug-deg>
+			<target-speed-kt type="double">110.000</target-speed-kt>
+		</settings>
+            <locks>
+            <passive-mode>0</passive-mode>
+			<vnav>0</vnav>
+			<at>0</at>
+			<cmda>0</cmda>
+			<at-disengage>0</at-disengage>
+			<cmda-disengage>0</cmda-disengage>
+			</locks>
+	</autopilot>
+	
+<item>
+        <!-- CON NASAL CREO EL DIALOG QUE APUNTA AL ARCHIVO -->        
+        <label>Combustible</label>
+        <binding>
+            <command>nasal</command>
+            <script>
+       var dlg = gui.Dialog.new("/sim/gui/dialogs/foo-config/dialog","Aircraft/737-400/Dialogs/fuel734.xml");
+                #dlg.open();
+                #dlg.close();
+            </script>
+        </binding>
+        <!-- CON XML EJECUTO EL DIALOG PARA QUE SE MUESTRE EN PANTALLA -->
+        <binding>            
+            <command>dialog-show</command>
+            <!--PEGOSTE -->
+            <dialog-name>fuel734</dialog-name>
+            <!--*********-->
+        </binding>
+    </item>
+	
+	
+<!-- Contrails -->
+
+	<environment>
+		<params>
+			<contrail-altitude>25000</contrail-altitude>
+		</params>
+            <turbulence>
+              <use-cloud-turbulence type="bool">false</use-cloud-turbulence>
+            </turbulence>
+   	</environment>
+
+ </PropertyList>
+
+
+
+
