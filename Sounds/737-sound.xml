@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
  
+<!-- New Sounds By Gabriel Hernandez -->
+
 <PropertyList>
 
  <fx>
 
 <engine>
  <name>Left engine off</name>
- <path>Sounds/turbine_shutdown.wav</path>
+ <path>Aircraft/737-400/Sounds/turbine_shutdown.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -27,7 +29,7 @@
 
 <engine>
  <name>Right engine off</name>
- <path>Sounds/turbine_shutdown.wav</path>
+ <path>Aircraft/737-400/Sounds/turbine_shutdown.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -48,7 +50,7 @@
 
 <engine>
  <name>Left engine on</name>
- <path>Sounds/turbine_start.wav</path>
+ <path>Aircraft/737-400/Sounds/turbine_start.wav</path>
  <mode>once</mode>
  <condition>
  <and>
@@ -69,7 +71,7 @@
  
 <engine>
  <name>Right engine on</name>
- <path>Sounds/turbine_start.wav</path>
+ <path>Aircraft/737-400/Sounds/turbine_start.wav</path>
  <mode>once</mode>
  <condition>
   <and>
@@ -90,7 +92,7 @@
  
 <engine>
    <name>Left engine sound starter inside</name>
-   <path>Sounds/jet.wav</path>
+   <path>Aircraft/737-400/Sounds/jet.wav</path>
    <mode>looped</mode>
    <condition>
      <equals>
@@ -117,7 +119,7 @@
 
 <engine>
    <name>Right engine sound starter inside</name>
-   <path>Sounds/jet.wav</path>
+   <path>Aircraft/737-400/Sounds/jet.wav</path>
    <mode>looped</mode>
    <condition>
      <equals>
@@ -144,7 +146,7 @@
 
   <engine>
    <name>Left engine sound starter outside</name>
-   <path>Sounds/whine.wav</path>
+   <path>Aircraft/737-400/Sounds/whine.wav</path>
    <mode>looped</mode>
    <condition>
     <greater-than>
@@ -178,7 +180,7 @@
 
  <engine>
    <name>Right engine sound starter outside</name>
-   <path>Sounds/whine.wav</path>
+   <path>Aircraft/737-400/Sounds/whine.wav</path>
    <mode>looped</mode>
    <condition>
       <greater-than>
@@ -212,7 +214,7 @@
 
   <engine>
    <name>Left engine sound inside</name>
-   <path>realt154/crj7_bn22.wav</path>
+   <path>Aircraft/737-400/737400.wav</path>
    <mode>looped</mode>
    <condition>
    <and>
@@ -242,7 +244,7 @@
 
   <engine>
    <name>Right engine sound inside</name>
-   <path>realt154/crj7_bn22.wav</path>
+   <path>Aircraft/737-400/737400.wav</path>
    <mode>looped</mode>
    <condition>
    <and>
@@ -272,7 +274,7 @@
 
   <engine>
    <name>Left engine sound outside</name>
-   <path>realt154/xcrj7_an11.wav</path>
+   <path>Aircraft/737-400/737400.wav</path>
    <mode>looped</mode>
    <condition>
      <and>
@@ -307,7 +309,7 @@
 
  <engine>
    <name>Right engine sound outside</name>
-   <path>realt154/xcrj7_an11.wav</path>
+   <path>Aircraft/737-400/737400.wav</path>
    <mode>looped</mode>
    <condition>
      <and>
@@ -342,7 +344,7 @@
     
  <engine>
    <name>Left engine reverse inside</name>
-   <path>Sounds/exhaust_loop.wav</path>
+   <path>Aircraft/737-400/Sounds/exhaust_loop.wav</path>
    <mode>looped</mode>
    <condition>
     <or>
@@ -365,7 +367,7 @@
 
   <engine>
    <name>Right engine reverse inside</name>
-   <path>Sounds/exhaust_loop.wav</path>
+   <path>Aircraft/737-400/Sounds/exhaust_loop.wav</path>
    <mode>looped</mode>
    <condition>
     <or>
@@ -388,7 +390,7 @@
 
   <engine>
      <name>Left engine reverser outside</name>
-       <path>Sounds/exhaust_loop.wav</path>
+       <path>Aircraft/737-400/Sounds/exhaust_loop.wav</path>
         <condition>
             <greater-than>
                 <property>/engines/engine/reverser-pos-norm</property>
@@ -424,7 +426,7 @@
 
     <engine>
         <name>Right engine reverser outside</name>
-        <path>Sounds/exhaust_loop.wav</path>
+        <path>Aircraft/737-400/Sounds/exhaust_loop.wav</path>
         <condition>
             <greater-than>
                 <property>/fdm/jsbsim/propulsion/engine[1]/reverser-angle-rad</property>
@@ -461,7 +463,7 @@
   <rumble>
    <name>rumble</name>
    <mode>looped</mode>
-   <path>Sounds/rumble.wav</path>
+   <path>Aircraft/737-400/Sounds/rumble.wav</path>
    <condition>
     <or>
      <property>/gear/gear[0]/wow</property>
@@ -474,7 +476,7 @@
    <gear>
    <name>gear</name>
    <mode>in-transit</mode>
-   <path>realt154/86GEARDN.wav</path>
+   <path>Aircraft/737-400/sounds/gear.wav</path>
    <property>/gear/gear[0]/position-norm</property>
    <pitch>
     <internal>dt_play</internal>
@@ -494,50 +496,6 @@
    </condition>
   </gear>
 
-  <!-- 
-  <gear>
-   <name>gear-horn</name>
-   <path>Sounds/gear-hrn.wav</path>
-   <mode>looped</mode>
-   <condition>
-    <equals>
-     <property>/gear/gear[0]/position-norm</property>
-     <value>0</value>
-     </equals>
-     </condition>      
-  </gear>
-  -->
-
-  <squeal>
-   <name>squeal</name>
-   <path>Aircraft/737-400/Sounds/touchdown.wav</path>
-   <condition>
-    <or>
-     <property>/gear/gear[0]/wow</property>
-     <property>/gear/gear[1]/wow</property>
-     <property>/gear/gear[2]/wow</property>
-    </or>
-   </condition>
-   <volume>
-    <property>/velocities/speed-down-fps</property>
-    <factor>0.05</factor>
-   </volume>
-   <volume>
-    <property>/velocities/airspeed-kt</property>
-    <factor>0.01</factor>
-   </volume>
-   <volume>
-    <internal>dt_stop</internal>
-    <factor>0.05</factor>
-    <max>1.0</max>
-   </volume>
-   <pitch>
-    <property>/velocities/airspeed-kt</property>
-    <factor>0.0025</factor>
-    <offset>1.2</offset>
-   </pitch>
-  </squeal>
- 
   <flap>
    <name>flaps</name>
    <mode>in-transit</mode>
@@ -551,7 +509,7 @@
  <wind>
    <name>wind</name>
    <mode>looped</mode>
-   <path>realt154/wind.wav</path>
+   <path>Aircraft/737-400/Sounds/wind.wav</path>
    <property>/velocities/airspeed-kt</property>
    <volume>
     <property>/position/altitude-ft</property>
@@ -576,7 +534,7 @@
   <overspeed>
 	<name>overspeed</name>
 	<mode>looped</mode>
-	<path>Sounds/overspeed2.wav</path>
+	<path>Aircraft/737-400/Sounds/overspeed.wav</path>
 	<condition>
 		<greater-than>
 		<property>velocities/airspeed-kt</property>
@@ -598,89 +556,25 @@
 </overspeed>
 
  <stall>
-        <name>stall</name>
-        <mode>looped</mode>
-        <path>/Aircraft/737-400/Sounds/stall.wav</path>
-        <condition>
-            <less-than>
-                <property>velocities/airspeed-kt</property>
-                <value>140</value>
-            </less-than>
-            <not>
-                <property>/gear/gear[0]/wow</property>
-                <property>/gear/gear[1]/wow</property>
-                <property>/gear/gear[2]/wow</property>
-                <property>/surface-positions/flap-pos-norm</property>
-                <property>/gear/gear[0]/position-norm</property>
-            </not>
-        </condition>
-        <volume>
-            <max>0.5</max>
-        </volume>
-        <position>
-            <x>-1.5</x>
-            <y>1.59</y>
-            <z>-7.25</z>
-        </position>
-        <reference-dist>1.0</reference-dist>
-        <max-dist>2.0</max-dist>
- </stall>
-
-<stall>
-        <name>stall</name>
-        <mode>looped</mode>
-        <path>/Aircraft/737-400/Sounds/stall.wav</path>
-        <condition>
-            <less-than>
-                <property>velocities/airspeed-kt</property>
-                <value>110</value>
-            </less-than>
-            <not>
-                <property>/gear/gear[0]/wow</property>
-                <property>/gear/gear[1]/wow</property>
-                <property>/gear/gear[2]/wow</property>
-                <property>/gear/gear[0]/position-norm</property>
-            </not>
-        </condition>
-        <volume>
-            <max>0.5</max>
-        </volume>
-        <position>
-            <x>-1.5</x>
-            <y>1.59</y>
-            <z>-7.25</z>
-        </position>
-        <reference-dist>1.0</reference-dist>
-        <max-dist>2.0</max-dist>
- </stall>
-
- <stall>
-        <name>stall</name>
-        <mode>looped</mode>
-        <path>/Aircraft/737-400/Sounds/stall.wav</path>
-        <condition>
-            <less-than>
-                <property>velocities/airspeed-kt</property>
-                <value>100</value>
-            </less-than>
-            <not>
-                <property>/gear/gear[0]/wow</property>
-                <property>/gear/gear[1]/wow</property>
-                <property>/gear/gear[2]/wow</property>
-                <property>/surface-positions/flap-pos-norm</property>
-            </not>
-        </condition>
-        <volume>
-            <max>0.5</max>
-        </volume>
-        <position>
-            <x>-1.5</x>
-            <y>1.59</y>
-            <z>-7.25</z>
-        </position>
-        <reference-dist>1.0</reference-dist>
-        <max-dist>2.0</max-dist>
- </stall>
+      <name>stall</name>
+      <mode>looped</mode>
+      <path>Aircraft/737-400/Sounds/stall.wav</path>
+      <condition>
+        <and>
+          <greater-than>
+            <property>/fdm/jsbsim/aero/alpha-deg</property>
+            <value>12.0</value>
+          </greater-than>
+          <greater-than>
+            <property>/velocities/airspeed-kt</property>
+            <value>20</value>
+          </greater-than>
+        </and>
+      </condition>
+      <volume>
+        <factor>1</factor>
+      </volume>
+    </stall>
 
 <switch>
    <name>click on</name>
@@ -1003,6 +897,501 @@
     			<factor>1.5</factor>
    	</volume>
 	</tcastestfailed>				
+
+<avionics>
+			<name>avionics fan and noise</name>
+			<path>Aircraft/737-400/Sounds/avionics.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+					<property>systems/electrical/outputs/efis</property>
+					<value>0</value>
+				</greater-than>
+			</condition>
+			<position>
+				<x>-17</x>
+				<y>0.01</y>
+				<z>-1.95</z>
+			</position>	
+			<volume>
+				<factor>0.2</factor>
+				<max>0.5</max>
+			</volume>
+			<reference-dist>1.2</reference-dist>
+			<max-dist>5</max-dist>
+		</avionics>
+
+ <announcement>
+			<name>welcome</name>
+			<path>Aircraft/737-400/Sounds/announce/welcome.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/welcome</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>safety</name>
+			<path>Aircraft/737-400/Sounds/announce/safety.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/safety</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>cruise</name>
+			<path>Aircraft/737-400/Sounds/announce/cruise.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/cruise</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>climb</name>
+			<path>Aircraft/737-400/Sounds/announce/climb.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/climb</property>
+			</condition>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>cruise-seatbelt</name>
+			<path>Aircraft/737-400/Sounds/announce/cruise-seatbelt.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/cruise-seatbelt</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>turbulence</name>
+			<path>Aircraft/737-400/Sounds/announce/turbulence.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/turbulence</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>descent</name>
+			<path>Aircraft/737-400/Sounds/announce/descent.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/descent</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>land</name>
+			<path>Aircraft/737-400/Sounds/announce/land.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/land</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>gate</name>
+			<path>Aircraft/737-400/Sounds/announce/gate.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/gate</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>emergency</name>
+			<path>Aircraft/737-400/Sounds/announce/emergency.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/emergency</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>pretakeoff</name>
+			<path>Aircraft/737-400/Sounds/announce/pretakeoff.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/pretakeoff</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>boarding2</name>
+			<path>Aircraft/737-400/Sounds/announce/music2.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>sim/sound/music2</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+		<announcement>
+			<name>brace</name>
+			<path>Aircraft/737-400/Sounds/announce/brace.wav</path>
+			<mode>once</mode>
+			<condition>
+				<property>sim/sound/brace</property>
+			</condition>
+			<volume>
+				<factor>8</factor>
+			</volume>
+			<position>
+				<x>0.00</x>
+				<y>0.00</y>
+				<z>0.00</z>
+			</position>
+			<reference-dist>20.0</reference-dist>
+			<max-dist>100.0</max-dist>
+		</announcement>
+
+
+  <eightyknots>
+        <name>eightyknots</name>
+        <mode>once</mode>
+        <type>avionics</type>
+        <path>Aircraft/737-400/Sounds/80kt.wav</path>
+        <condition>
+			<or>
+			<property>/gear/gear[0]/wow</property>
+			<property>/gear/gear[2]/wow</property>
+			</or>	
+			<greater-than>
+				<property>/velocities/airspeed-kt</property>
+				<value>80</value>
+			</greater-than>
+			<less-than>
+				<property>/velocities/airspeed-kt</property>
+				<value>88</value>
+			</less-than>			
+			</condition>	
+    </eightyknots> 
+   
+	<veeone>
+        <name>vee-one</name>
+        <mode>once</mode>
+        <type>avionics</type>
+        <path>Aircraft/737-400/Sounds/v1.wav</path>
+        <condition>
+			<or>
+			<property>/gear/gear[0]/wow</property>
+			<property>/gear/gear[2]/wow</property>
+			</or>	
+			<greater-than>
+				<property>/velocities/airspeed-kt</property>
+				<value>140</value>
+			</greater-than>
+			<less-than>
+				<property>/velocities/airspeed-kt</property>
+				<value>148</value>
+			</less-than>			
+       </condition>	
+    </veeone>
+ 
+	<rotate>
+        <name>rotate</name>
+        <mode>once</mode>
+        <type>avionics</type>
+        <path>Aircraft/737-400/Sounds/vr.wav</path>
+        <condition>
+			<or>
+			<property>/gear/gear[0]/wow</property>
+			<property>/gear/gear[2]/wow</property>
+			</or>
+			<greater-than>
+				<property>/velocities/airspeed-kt</property>
+				<value>150</value>
+			</greater-than>
+			<less-than>
+				<property>/velocities/airspeed-kt</property>
+				<value>160</value>
+			</less-than>			
+		</condition>	
+              </rotate>	
+    
+                
+           <click>
+        <name>click1</name>
+        <path>Aircraft/737-400/Sounds/click.wav</path>
+        <condition>
+            <property>sim/sound/click</property>
+        </condition>
+    </click>
+
+    <click>
+        <name>click2</name>
+        <path>Aircraft/737-400/Sounds/click.wav</path>
+        <condition>
+            <not>
+                <property>sim/sound/click</property>
+            </not>
+        </condition>
+    </click>
+
+ <appr_mins>
+        <name>appr_mins</name>
+        <mode>once</mode>
+        <type>avionics</type>		
+        <path>Aircraft/737-400/Sounds/approaching-minimums.wav</path>
+        <condition>
+			<less-than>
+				<property>/position/altitude-agl-ft</property>
+				<value>380</value>
+			</less-than>
+			<greater-than>
+				<property>/position/altitude-agl-ft</property>
+				<value>300</value>
+			</greater-than>			
+			<less-than>
+				<property>/velocities/vertical-speed-fps</property>
+				<value>0</value>
+			</less-than>
+		</condition>
+          </appr_mins>
+	   
+		
+		<seatbelt>
+			<name>cabinalert</name>
+			<path>Aircraft/737-400/Sounds/cabinalert.wav</path>
+			<mode>once</mode>
+			<condition>
+				<or>
+					<property>sim/sound/no-smoking-sign</property>
+					<property>sim/sound/seatbelt-sign</property>
+					
+					<not><property>sim/sound/no-smoking-sign</property></not>
+					<not><property>sim/sound/seatbelt-sign</property></not>
+				</or>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+			</volume>
+		</seatbelt>
+	
+	    
+		<wow>
+			<name>wow 0</name>
+			<mode>once</mode>
+			<path>Aircraft/737-400/Sounds/wow.wav</path>
+			<condition>
+				<property>gear/gear[0]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		
+                 <wow>
+			<name>wow 1</name>
+			<mode>once</mode>
+			<path>Aircraft/737-400/Sounds/wow.wav</path>
+			<condition>
+				<property>gear/gear[1]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		
+                 <wow>
+			<name>wow 2</name>
+			<mode>once</mode>
+			<path>Aircraft/737-400/Sounds/wow.wav</path>
+			<condition>
+				<property>gear/gear[2]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		
+		<wow>
+			<name>wow 3</name>
+			<mode>once</mode>
+			<path>Aircraft/737-400/Sounds/wow.wav</path>
+			<condition>
+				<property>gears/gear[0]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		  
+                 <wow>
+		 	<name>wow 4</name>
+			<mode>once</mode>
+			<path>Aircraft/737-400/Sounds/wow.wav</path>
+			<condition>
+				<property>gears/gear[1]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		
+                 <wow>
+			<name>wow 5</name>
+			<mode>once</mode>
+			<path>Aircraft/737-400/Sounds/wow.wav</path>
+			<condition>
+				<property>gears/gear[2]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+
+                    <avionics>
+			<name>avionics</name>
+			<path>Aircraft/737-400/Sounds/avionics.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+			<property>systems/electrical/outputs/efis</property>
+					<value>0</value>
+				</greater-than>
+			</condition>
+			<position>
+				<x>-17</x>
+				<y>0.01</y>
+				<z>-1.95</z>
+			</position>	
+			<volume>
+				<factor>0.2</factor>
+				<max>0.5</max>
+			</volume>
+			<reference-dist>1.2</reference-dist>
+			<max-dist>5</max-dist>
+		</avionics>
+
 
 </fx>
  

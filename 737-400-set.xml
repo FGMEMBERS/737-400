@@ -3,7 +3,7 @@
  <sim>
 
   <description>Boeing 737-400 3D Cockpit and Panel</description>
-  <author>David Culp, Innis Cunningham, FlightGear Iespana Team</author>
+  <author>David Culp, Innis Cunningham, FlightGear Iespana Team, Gabriel Hernandez(New sounds Effects, Fixes Other)</author>
   <status>In-Development</status>
 
   <flight-model>jsb</flight-model>
@@ -167,6 +167,40 @@
      <script>aircraft.livery.dialog.toggle()</script>
     </binding>
    </item>
+<item>
+		      <label>Announcements</label>
+		      <binding>
+					<command>nasal</command>
+					<script>
+						var mal = gui.Dialog.new("/sim/gui/dialogs/announcements/menu/dialog", "Aircraft/737-400/Dialogs/announcements-dialog.xml");
+						mal.open();
+		       </script>
+		      </binding>
+          </item> 
+ <item>
+			<name>lights</name>
+			<label>Lights</label>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var lights = gui.Dialog.new("sim/gui/dialogs/lights/dialog", "Aircraft/737-400/Systems/lights-dlg.xml");
+						lights.open();
+					</script>
+				</binding>
+		  </item>
+
+		  <item>
+
+                <label>System Failures</label>
+					<binding>
+                            <command>nasal</command>
+                            <script>
+                             var failures = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/737-400/Systems/failures-dlg.xml");
+                             failures.open();
+                            </script>
+                    </binding>
+            </item>
+
 <item>
 <label>Yokes On/Off</label>
 <binding>
@@ -447,9 +481,6 @@
    <radionav>
     <file>Aircraft/737-400/Nasal/radionav.nas</file>
    </radionav>
-    <failures>
-    <file>Aircraft/737-400/Nasal/Failures.nas</file>
-   </failures>
    <reversethrust>
     <file>Aircraft/737-400/Nasal/reverse-thrust.nas</file>
    </reversethrust>
@@ -557,7 +588,3 @@
    	</environment>
 
  </PropertyList>
-
-
-
-

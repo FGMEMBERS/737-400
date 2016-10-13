@@ -4179,7 +4179,294 @@
   <max-m>25000</max-m>
 </animation>
 
+<!-- CONTRAIL -->
+
+  <!-- Particules OSG -->
+  <model>
+    <path>Aircraft/737-400/Models/Effects/Contrail/contrail.xml</path>
+    <offsets>
+      <x-m>20.3</x-m>
+      <y-m>-4.8</y-m>
+      <z-m>-1.3</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/737-400/Models/Effects/Contrail/contrail.xml</path>
+    <offsets>
+      <x-m>20.3</x-m>
+      <y-m>5.2</y-m>
+      <z-m>-1.3</z-m> 
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<!-- Tyre Smoke -->
+
+<model>
+	<path>Aircraft/737-400/Models/Effects/tyre-smoke-nose.xml</path>
+	<name>tyre-smoke-n</name>
+	<offsets>
+		<x-m>4.67878</x-m>
+		<y-m>0.25137</y-m>
+		<z-m>-2.64176</z-m>
+	</offsets>
+</model>
+
+
+<model>
+	<path>Aircraft/737-400/Models/Effects/tyre-smoke-left.xml</path>
+	<name>tyre-smoke-l</name>
+	<offsets>
+			<x-m>7.17122</x-m>
+			<y-m>2.9856</y-m>
+			<z-m>-2.64175</z-m>
+		</offsets>
+</model>
+
+<model>
+	<path>Aircraft/737-400/Models/Effects/tyre-smoke-right.xml</path>
+	<name>tyre-smoke-r</name>
+	<offsets>
+		<x-m>7.17122</x-m>
+		<y-m>-2.9856</y-m>
+		<z-m>-2.64175</z-m>
+		</offsets>
+</model>
+
+<!-- Services by PR-GEO -->
+
+  <model>
+    <path>Aircraft/737-400/Models/Services/Services.xml</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model> 
+
+<!--Operations--> 
+          
+           <!-- Passenger Stairways -->
+
+ <model>
+ <name>Stairwayfront</name>
+ <path>Aircraft/737-400/Models/Operations/Stairways/passerelle.xml</path>
+ <condition>
+ <equals>
+			             <property>controls/switches/stairs1</property>
+                                            <value type="bool">true</value>
+ </equals>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>10</value>
+            </less-than>
+  </condition>   
+  <offsets>
+  <x-m>-3.8443</x-m>
+  <y-m>-0.80</y-m>
+  <z-m>-2.7</z-m>
+<heading-deg>92</heading-deg>
+ </offsets>
+</model>
+
+<model>
+ <name>Stairwayback</name>
+ <path>Aircraft/737-400/Models/Operations/Stairways/passerelle.xml</path>
+ <condition>
+ <equals>
+			             <property>controls/switches/stairs2</property>
+                                            <value type="bool">true</value>
+ </equals>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>10</value>
+            </less-than>
+  </condition>   
+  <offsets>
+  <x-m>18.20</x-m>
+  <y-m>-0.80</y-m>
+  <z-m>-2.7</z-m>
+<heading-deg>92</heading-deg>
+ </offsets>
+</model>
+
+<model>
+<name>Fuel truck</name>
+ <path>Aircraft/737-400/Models/Operations/Fuel/Fuel.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/Fuel</property>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>10</value>
+            </less-than>
+ </and>
+ </condition>
+<offsets>
+		<x-m>-1</x-m>
+     <y-m>12.5</y-m>
+     <z-m>-2.7</z-m>
+     <pitch-deg>0</pitch-deg>
+     <heading-deg>340</heading-deg>
+        </offsets>
+</model>
+
+         <model>
+<name>Bus</name>
+ <path>Aircraft/737-400/Models/Operations/Bus/bus.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/bus</property>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>15</value>
+            </less-than>
+ </and>
+ </condition>
+<offsets>
+           <x-m>-13</x-m>
+            <y-m>-15</y-m>
+            <z-m>-2.70</z-m>
+            <pitch-deg>0</pitch-deg>
+            <heading-deg>280</heading-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Gpu</name>
+ <path>Aircraft/737-400/Models/Operations/Gpu/gpu.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/gpu</property>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>15</value>
+            </less-than>
+ </and>
+ </condition>
+<offsets>
+           <x-m>-6.5</x-m>
+            <y-m>9.5</y-m>
+            <z-m>-0.82</z-m>
+            <pitch-deg>0</pitch-deg>
+            <heading-deg>360</heading-deg>
+        </offsets>
+</model>
+
+<model>
+<name>Car Service</name>
+<path>Aircraft/737-400/Models/Operations/car service/traffic.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/traffic</property>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>15</value>
+            </less-than>
+ </and>
+ </condition>
+<offsets>
+		        <x-m>15</x-m>
+            <y-m>-11.5</y-m>
+            <z-m>-2.70</z-m>
+            <pitch-deg>0</pitch-deg>
+            <heading-deg>-310</heading-deg>
+        </offsets>
+</model>
+
+   <!--Catering-->
+   
+<model>
+ <name>Cateringback Vehicle</name>
+ <path>Aircraft/737-400/Models/Operations/Catering/catering.xml</path>
+ <condition>
+ <equals>
+			             <property>controls/switches/catering2</property>
+                                            <value type="bool">true</value>
+ </equals>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>15</value>
+            </less-than>
+  </condition>   
+  <offsets>
+  <x-m>19.50</x-m>
+  <y-m>3.85</y-m>
+  <z-m>-2.70</z-m>
+<heading-deg>271</heading-deg>
+ </offsets>
+</model>
+
+<model>
+ <name>Chocks</name>
+ <path>Aircraft/737-400/Models/Operations/Chocks/chocks.xml</path>
+ <condition>
+ <equals>
+			             <property>controls/switches/chocks</property>
+                                            <value type="bool">true</value>
+ </equals>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>5</value>
+            </less-than>
+  </condition>   
+  <offsets>
+  <x-m>9.10</x-m>
+  <y-m>0.00</y-m>
+  <z-m>3.90</z-m>
+<heading-deg>360</heading-deg>
+ </offsets>
+</model>
+
+<!-- Engine Safety Cones Left -->
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/737-400/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>15</value>
+            </less-than>
+ </and>
+ </condition>
+<offsets>
+            <x-m>0.5</x-m>
+            <y-m>4.8</y-m>
+            <z-m>-2.7</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+                  
+
+<!-- Engine Safety Cones Right -->
+
+<model>
+<name>Cone</name>
+ <path>Aircraft/737-400/Models/Operations/Cones/cone.xml</path>
+ <condition>
+ <and>
+  <property>controls/switches/cones</property>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>15</value>
+            </less-than>
+ </and>
+ </condition>
+<offsets>
+            <x-m>0.5</x-m>
+            <y-m>-4.8</y-m>
+            <z-m>-2.67</z-m>
+            <pitch-deg>0</pitch-deg>
+        </offsets>
+</model>
+
 </PropertyList>
-
-
-

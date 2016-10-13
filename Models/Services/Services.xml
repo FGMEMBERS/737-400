@@ -1,0 +1,78 @@
+<!-- 777-300 George Luiz -->
+<PropertyList>
+    <!-- Engine Safety Cones -->
+  <model>
+    <name>Cone</name>
+    <path>Aircraft/737-800/Models/Services/Safety-Cones/safety-cones.xml</path>
+    <condition>
+      <and>
+        <property>/controls/groundservice/safety-cones</property>
+        <less-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>1</value>
+        </less-than>
+        <greater-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>-1</value>
+        </greater-than>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-9</x-m>
+      <y-m>0</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
+     
+
+   <!-- Engine Protection -->
+  <model>
+    <name>Engine Protection Left</name>
+    <path>Aircraft/737-800/Models/Services/EngineProtection/Disc.xml</path>
+    <condition>
+      <and>
+        <property>/controls/groundservice/protection</property>
+        <less-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>1</value>
+        </less-than>
+        <greater-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>-1</value>
+        </greater-than>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-8.00</x-m>
+      <y-m>0.00</y-m>
+      <z-m>0.00</z-m>
+    </offsets>
+  </model>
+
+
+  <model>
+    <name>Engine Protection right</name>
+    <path>Aircraft/737-800/Models/Services/EngineProtection/Disc.xml</path>
+    <condition>
+      <and>
+        <property>/controls/groundservice/protection</property>
+        <less-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>1</value>
+        </less-than>
+        <greater-than>
+          <property>velocities/groundspeed-kt</property>
+          <value>-1</value>
+        </greater-than>
+      </and>
+    </condition>
+    <offsets>
+      <x-m>-8.05</x-m>
+      <y-m>0.20</y-m>
+      <z-m>0.00</z-m>
+    </offsets>
+  </model>
+
+
+
+</PropertyList>
