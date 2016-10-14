@@ -5,7 +5,7 @@
     xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
     
     <fileheader>
-        <author> Dave Culp </author>
+        <author> Dave Culp Gabriel Hernandez </author>
         <author> Aeromatic </author>
         <filecreationdate> 2006-01-04 </filecreationdate>
         <version>$Revison: 1.0 $</version>
@@ -381,7 +381,7 @@
             <aerosurface_scale name="Elevator Control">
                 <input>fcs/pitch-trim-sum</input>
                 <range>
-                    <min>-0.192</min>
+                    <min>-0.193</min>
                     <max> 0.3320</max>
                 </range>
                 <output>fcs/elevator-pos-rad</output>
@@ -415,8 +415,8 @@
             <aerosurface_scale name="Left Aileron Control">
                 <input>fcs/roll-trim-sum</input>
                 <range>
-                    <min>-0.39</min>
-                    <max> 0.39</max>
+                    <min>-0.40</min>
+                    <max> 0.40</max>
                 </range>
                 <output>fcs/left-aileron-pos-rad</output>
             </aerosurface_scale>
@@ -424,8 +424,8 @@
             <aerosurface_scale name="Right Aileron Control">
                 <input>-fcs/roll-trim-sum</input>
                 <range>
-                    <min>-0.39</min>
-                    <max> 0.39</max>
+                    <min>-0.40</min>
+                    <max> 0.40</max>
                 </range>
                 <output>fcs/right-aileron-pos-rad</output>
             </aerosurface_scale>
@@ -433,8 +433,8 @@
             <aerosurface_scale name="Left aileron Normalized">
                 <input>fcs/left-aileron-pos-rad</input>
                 <domain>
-                    <min>-0.39</min>
-                    <max> 0.39</max>
+                    <min>-0.40</min>
+                    <max> 0.40</max>
                 </domain>
                 <range>
                     <min>-1</min>
@@ -446,8 +446,8 @@
             <aerosurface_scale name="Right aileron Normalized">
                 <input>fcs/right-aileron-pos-rad</input>
                 <domain>
-                    <min>-0.39</min>
-                    <max> 0.39</max>
+                    <min>-0.40</min>
+                    <max> 0.40</max>
                 </domain>
                 <range>
                     <min>-1</min>
@@ -504,8 +504,8 @@
             <aerosurface_scale name="Rudder Control">
                 <input>fcs/rudder-sum</input>
                 <range>
-                    <min>-0.523</min>
-                    <max> 0.523</max>
+                    <min>-0.525</min>
+                    <max> 0.525</max>
                 </range>
                 <output>fcs/rudder-pos-rad</output>
             </aerosurface_scale>
@@ -513,8 +513,8 @@
             <aerosurface_scale name="Rudder Normalized">
                 <input>fcs/rudder-pos-rad</input>
                 <domain>
-                    <min>-0.523</min>
-                    <max> 0.523</max>
+                    <min>-0.525</min>
+                    <max> 0.525</max>
                 </domain>
                 <range>
                     <min>-1</min>
@@ -1048,4 +1048,3 @@
     </output>
 
 </fdm_config>
-
