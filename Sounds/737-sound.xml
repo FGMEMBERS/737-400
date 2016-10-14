@@ -6,7 +6,7 @@
 
  <fx>
 
-<engine>
+<leftstartup>
  <name>Left engine off</name>
  <path>Aircraft/737-400/Sounds/turbine_shutdown.wav</path>
  <mode>once</mode>
@@ -25,9 +25,9 @@
  </position>
  <reference-dist>10.0</reference-dist>
  <max-dist>50.0</max-dist>
- </engine>
+ </leftstartup>
 
-<engine>
+<rightstartup>
  <name>Right engine off</name>
  <path>Aircraft/737-400/Sounds/turbine_shutdown.wav</path>
  <mode>once</mode>
@@ -46,49 +46,32 @@
  </position>
  <reference-dist>10.0</reference-dist>
  <max-dist>50.0</max-dist>
-</engine>
+</rightstartup>
 
-<engine>
- <name>Left engine on</name>
- <path>Aircraft/737-400/Sounds/turbine_start.wav</path>
- <mode>once</mode>
- <condition>
- <and>
-  <property>controls/engines/engine[0]/starter</property>
- </and>
- </condition>
-  <volume>
-   <property>sim/sound/Evolume</property>
-  </volume>
-  <position>
-      <x>3.69645</x>
-      <y>4.77041</y>
-      <z>-1.30186</z>
- </position>
- <reference-dist>10.0</reference-dist>
- <max-dist>50.0</max-dist>
- </engine>
- 
-<engine>
- <name>Right engine on</name>
- <path>Aircraft/737-400/Sounds/turbine_start.wav</path>
- <mode>once</mode>
- <condition>
-  <and>
-  <property>controls/engines/engine[1]/starter</property>
-  </and>
- </condition>
-  <volume>
-   <property>sim/sound/Evolume</property>
-  </volume>
- <position>
-      <x>3.69645</x>
-      <y>-4.77041</y>
-      <z>-1.30186</z>
- </position>
- <reference-dist>10.0</reference-dist>
- <max-dist>50.0</max-dist>
- </engine>
+<leftstartup>
+      <name>leftenginestart</name>
+      <path>Aircraft/737-800/Sounds/turbine_start.wav</path>
+      <mode>once</mode>
+      <condition>
+        <property>/controls/engines/engine[0]/starter</property>
+      </condition>
+      <volume>
+        <factor>0.75</factor>
+      </volume>
+    </leftstartup>
+
+    <rightstartup>
+      <name>rightenginestart</name>
+      <path>Aircraft/737-300-CHT/Sounds/turbine_start.wav</path>
+      <mode>once</mode>
+      <condition>
+        <property>/controls/engines/engine[1]/starter</property>
+      </condition>
+      <volume>
+        <factor>0.75</factor>
+      </volume>
+    </rightstartup>
+
  
 <engine>
    <name>Left engine sound starter inside</name>
