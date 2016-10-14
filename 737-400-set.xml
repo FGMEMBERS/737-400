@@ -101,6 +101,41 @@
     </config>
    </view>
   
+  <view n="102">
+    <name>Turbina izquierda</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">85</default-field-of-view-deg>
+      <pitch-offset-deg>-8.0</pitch-offset-deg>
+      <heading-offset-deg type="double">90</heading-offset-deg>
+      <x-offset-m archive="y"> -2.0 </x-offset-m> <!--Left/Right-->
+      <y-offset-m archive="y"> 1.90 </y-offset-m> <!--Up/Down-->
+      <z-offset-m archive="y"> 3.67 </z-offset-m> <!--Fdw/Back-->
+    </config>
+   </view>
+  <view n="103">
+    <name>Turbina derecha</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">85</default-field-of-view-deg>
+      <pitch-offset-deg>-8.0</pitch-offset-deg>
+      <heading-offset-deg type="double">270</heading-offset-deg>
+      <x-offset-m archive="y"> 2.0 </x-offset-m> <!--Left/Right-->
+      <y-offset-m archive="y"> 1.90 </y-offset-m> <!--Up/Down-->
+      <z-offset-m archive="y"> 3.67 </z-offset-m> <!--Fdw/Back-->
+    </config>
+   </view>
+  
+ 
+  
   <chase-distance-m>-55</chase-distance-m>
 
   <flaps>

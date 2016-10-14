@@ -5,11 +5,11 @@
     xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
     
     <fileheader>
-        <author> Dave Culp (FDM, 3D model) Bisutti (3D Panel) Nitus (Cockpit, Some Liveries and Instruments)</author>
+        <author> Dave Culp </author>
         <author> Aeromatic </author>
-        <filecreationdate> 2008 </filecreationdate>
-        <version>3.0</version>
-        <description> Boeing 737-400 </description>
+        <filecreationdate> 2006-01-04 </filecreationdate>
+        <version>$Revison: 1.0 $</version>
+        <description> Models a 737. </description>
     </fileheader>
 
     <metrics>
@@ -30,14 +30,14 @@
             <y> -30 </y>
             <z>  70 </z>
         </location>
-        <location name="VRP" unit="M">
-            <x> 8.9299 </x>
+        <location name="VRP" unit="IN">
+            <x> 0 </x>
             <y> 0 </y>
             <z> 0 </z>
         </location>
     </metrics>
 
-    <mass_balance>
+<mass_balance>
         <ixx unit="SLUG*FT2">    562000 </ixx>
         <iyy unit="SLUG*FT2"> 1.473e+06 </iyy>
         <izz unit="SLUG*FT2"> 1.894e+06 </izz>
@@ -284,10 +284,10 @@
     </ground_reactions>
     <propulsion>
         <engine file="CFM56">
-            <location unit="M"> <!-- Left engine -->
-                <x> 3.15055 </x>
-                <y> 4.73914 </y>
-                <z> -1.30526 </z>
+            <location unit="IN">
+                <x>  540 </x>
+                <y> -193 </y>
+                <z>  -40 </z>
             </location>
             <orient unit="DEG">
                 <roll>  0 </roll>
@@ -297,10 +297,10 @@
             <feed>0</feed>
             <feed>2</feed>
             <thruster file="direct">
-                <location unit="M">
-                     <x> 3.15055 </x>
-                     <y> 4.73914 </y>
-                     <z> -1.30526 </z>
+                <location unit="IN">
+                    <x>  540 </x>
+                    <y> -193 </y>
+                    <z>  -40 </z>
                 </location>
                 <orient unit="DEG">
                     <roll>  0 </roll>
@@ -310,10 +310,10 @@
             </thruster>
         </engine>
         <engine file="CFM56">
-            <location unit="M"> <!-- Right engine -->
-                <x> 3.15055 </x>
-                <y> -4.73914 </y>
-                <z> -1.30526 </z>
+            <location unit="IN">
+                <x> 540 </x>
+                <y> 193 </y>
+                <z> -40 </z>
             </location>
             <orient unit="DEG">
                 <roll>  0 </roll>
@@ -323,10 +323,10 @@
             <feed>1</feed>
             <feed>2</feed>
             <thruster file="direct">
-                <location unit="M">
-                    <x> 3.15055 </x>
-                    <y> -4.73914 </y>
-                    <z> -1.30526 </z>
+                <location unit="IN">
+                    <x> 540 </x>
+                    <y> 193 </y>
+                    <z> -40 </z>
                 </location>
                 <orient unit="DEG">
                     <roll>  0 </roll>
@@ -341,9 +341,9 @@
                 <y> -80 </y>
                 <z> -18 </z>
             </location>
-            <capacity unit="LBS"> 4100 </capacity>
-            <contents unit="LBS"> 4100 </contents>
-            <temperature> 65.0 </temperature> <!-- Fuel temp in degrees F -->
+            <capacity unit="LBS"> 10050 </capacity>
+            <contents unit="LBS"> 10050 </contents>
+            <temperature> 59.0 </temperature> <!-- Fuel temp in degrees F -->
         </tank>
         <tank type="FUEL"><!-- Right wing tank -->
             <location unit="IN">
@@ -351,9 +351,8 @@
                 <y>  80 </y>
                 <z> -18 </z>
             </location>
-            <capacity unit="LBS"> 4100 </capacity>
-            <contents unit="LBS"> 4100 </contents>
-            <temperature> 65.0 </temperature> <!-- Fuel temp in degrees F -->
+            <capacity unit="LBS"> 10050 </capacity>
+            <contents unit="LBS"> 10050 </contents>
         </tank>
         <tank type="FUEL"><!-- Center tank -->
             <location unit="IN">
@@ -361,9 +360,8 @@
                 <y>   0 </y>
                 <z> -18 </z>
             </location>
-            <capacity unit="LBS"> 44258 </capacity>
-            <contents unit="LBS"> 44258 </contents>
-            <temperature> 65.0 </temperature> <!-- Fuel temp in degrees F -->
+            <capacity unit="LBS"> 23170 </capacity>
+            <contents unit="LBS"> 0 </contents>
         </tank>
     </propulsion>
 
@@ -383,8 +381,8 @@
             <aerosurface_scale name="Elevator Control">
                 <input>fcs/pitch-trim-sum</input>
                 <range>
-                    <min>-0.3</min>
-                    <max> 0.3</max>
+                    <min>-0.192</min>
+                    <max> 0.3320</max>
                 </range>
                 <output>fcs/elevator-pos-rad</output>
             </aerosurface_scale>
@@ -392,8 +390,8 @@
             <aerosurface_scale name="Elevator Normalized">
                 <input>fcs/elevator-pos-rad</input>
                 <domain>
-                    <min>-0.3</min>
-                    <max> 0.3</max>
+                    <min>-0.336</min>
+                    <max> 0.3875</max>
                 </domain>
                 <range>
                     <min>-1</min>
@@ -417,8 +415,8 @@
             <aerosurface_scale name="Left Aileron Control">
                 <input>fcs/roll-trim-sum</input>
                 <range>
-                    <min>-0.35</min>
-                    <max> 0.35</max>
+                    <min>-0.39</min>
+                    <max> 0.39</max>
                 </range>
                 <output>fcs/left-aileron-pos-rad</output>
             </aerosurface_scale>
@@ -426,8 +424,8 @@
             <aerosurface_scale name="Right Aileron Control">
                 <input>-fcs/roll-trim-sum</input>
                 <range>
-                    <min>-0.35</min>
-                    <max> 0.35</max>
+                    <min>-0.39</min>
+                    <max> 0.39</max>
                 </range>
                 <output>fcs/right-aileron-pos-rad</output>
             </aerosurface_scale>
@@ -435,8 +433,8 @@
             <aerosurface_scale name="Left aileron Normalized">
                 <input>fcs/left-aileron-pos-rad</input>
                 <domain>
-                    <min>-0.35</min>
-                    <max> 0.35</max>
+                    <min>-0.39</min>
+                    <max> 0.39</max>
                 </domain>
                 <range>
                     <min>-1</min>
@@ -448,8 +446,8 @@
             <aerosurface_scale name="Right aileron Normalized">
                 <input>fcs/right-aileron-pos-rad</input>
                 <domain>
-                    <min>-0.35</min>
-                    <max> 0.35</max>
+                    <min>-0.39</min>
+                    <max> 0.39</max>
                 </domain>
                 <range>
                     <min>-1</min>
@@ -506,8 +504,8 @@
             <aerosurface_scale name="Rudder Control">
                 <input>fcs/rudder-sum</input>
                 <range>
-                    <min>-0.35</min>
-                    <max> 0.35</max>
+                    <min>-0.523</min>
+                    <max> 0.523</max>
                 </range>
                 <output>fcs/rudder-pos-rad</output>
             </aerosurface_scale>
@@ -515,8 +513,8 @@
             <aerosurface_scale name="Rudder Normalized">
                 <input>fcs/rudder-pos-rad</input>
                 <domain>
-                    <min>-0.35</min>
-                    <max> 0.35</max>
+                    <min>-0.523</min>
+                    <max> 0.523</max>
                 </domain>
                 <range>
                     <min>-1</min>
@@ -729,7 +727,7 @@
                     <property>metrics/Sw-sqft</property>
                     <property>aero/cl-squared</property>
                     <property>aero/function/kCDge</property>
-                    <value>0.041</value>
+                    <value>0.053</value>
                 </product>
             </function>
 
@@ -742,7 +740,7 @@
                           <independentVar>velocities/mach</independentVar>
                           <tableData>
                               0.00	0.0000
-                              0.81	0.0000
+                              0.79	0.0000
                               1.10	0.0230
                               1.80	0.0150
                           </tableData>
@@ -756,7 +754,7 @@
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>fcs/flap-pos-norm</property>
-                    <value>0.12</value>
+                    <value>0.22</value>
                 </product>
             </function>
 
@@ -766,7 +764,7 @@
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>gear/gear-pos-norm</property>
-                    <value>0.015</value>
+                    <value>0.035</value>
                 </product>
             </function>
 
@@ -888,7 +886,7 @@
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
                     <property>aero/beta-rad</property>
-                    <value>-0.09</value> <!-- -0.09 -->
+                    <value>-0.09</value>
                 </product>
             </function>
 
@@ -900,7 +898,7 @@
                     <property>metrics/bw-ft</property>
                     <property>aero/bi2vel</property>
                     <property>velocities/p-aero-rad_sec</property>
-                    <value>-0.4</value> <!-- -0.4 -->
+                    <value>-0.4</value>
                 </product>
             </function>
 
@@ -912,7 +910,7 @@
                     <property>metrics/bw-ft</property>
                     <property>aero/bi2vel</property>
                     <property>velocities/r-aero-rad_sec</property>
-                    <value>0.09</value> <!-- 0.09 -->
+                    <value>0.09</value>
                 </product>
             </function>
 
@@ -926,9 +924,9 @@
                       <table>
                           <independentVar>velocities/mach</independentVar>
                           <tableData>
-                              0.0	0.060
+                              0.0	0.100
                               2.0	0.033
-                          </tableData> <!-- 0.100 -->
+                          </tableData>
                       </table>
                 </product>
             </function>
@@ -940,7 +938,7 @@
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
                     <property>fcs/rudder-pos-rad</property>
-                    <value>0.01</value> <!-- 0.01 -->
+                    <value>0.01</value>
                 </product>
             </function>
         </axis>
@@ -966,7 +964,7 @@
                       <table>
                           <independentVar>velocities/mach</independentVar>
                           <tableData>
-                              0.0	-0.95 <!-- -1.20 -->
+                              0.0	-1.20
                               2.0	-0.30
                           </tableData>
                       </table>
@@ -1031,6 +1029,23 @@
         </axis>
     </aerodynamics>
 
+    <output name="B737_datalog.csv" rate="20" type="CSV">
+        <property> aero/qbar-psf </property>
+        <property> attitude/phi-rad </property>
+        <property> position/h-sl-ft </property>
+        <property> velocities/vc-kts </property>
+        <property> fcs/throttle-cmd-norm </property>
+        <property> fcs/elevator-pos-norm </property>
+        <rates> ON </rates>
+        <velocities> ON </velocities>
+        <forces> ON </forces>
+        <moments> ON </moments>
+        <position> ON </position>
+        <propulsion> ON </propulsion>
+        <aerosurfaces> OFF </aerosurfaces>
+        <fcs> OFF </fcs>
+        <ground_reactions> ON </ground_reactions>
+    </output>
 
 </fdm_config>
 
