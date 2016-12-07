@@ -163,17 +163,17 @@
 
   <help>
    <title>Boeing 737-400</title>
-   <line>Choose your favorit texture using the key above</line>
-   <line>Use AutoBrakes to stop the plane when you land without the manual brakes</line> 
-   <line>the plane will stop acording with the auto brakes level</line>
+   <line>Choose your favorite livery using the 'l' key</line>
+   <line>Use Autobrakes to stop the plane when you land without the manual brakes</line> 
+   <line>The plane will stop acording with the auto brakes level</line>
    <line>Use the RTO (reject take off) when you reject or abort a take off</line>
    <line>To Reject a take off you must set RTO before the take off or, when you are</line>
    <line>aborting the take off, the plane will stop at 10kt, then the brake will be released</line>
    <line>To start the plane you have to select "Engine Starter" and then when</line>
    <line>n2 shows 25 you have to select "Engine Start", If you want to cutoff</line>
    <line>the engine just select "Engine Start"</line>
-   <line>The SpeedBrakes are automatic, when you land they lift up automaticaly, you will</line>
-   <line>see a green light what indicate that the speedBrake is up</line>
+   <line>The Speedbrakes are automatic, when you land they lift up automaticaly; you will</line>
+   <line>see a green light that indicates that the speedbrake is up</line>
    <key>
     <name>l</name>
     <desc>Brings up the Livery Switching Dialog</desc>
@@ -355,7 +355,7 @@
 </item>
 	<item>
 		<!-- CON NASAL CREO EL DIALOG QUE APUNTA AL ARCHIVO -->		
-		<label>Combustible</label>
+		<label>Fuel Dialog</label>
 		<binding>
 			<command>nasal</command>
 			<script>
@@ -592,7 +592,7 @@
 	
 <item>
         <!-- CON NASAL CREO EL DIALOG QUE APUNTA AL ARCHIVO -->        
-        <label>Combustible</label>
+        <label>Fuel Dialog</label>
         <binding>
             <command>nasal</command>
             <script>
