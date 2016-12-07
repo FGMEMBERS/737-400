@@ -397,7 +397,7 @@
    <desc>Show livery select dialog</desc>
    <binding>
    <command>nasal</command>
-  <script>livery.showModelSelectDialog()</script>
+  <script>aircraft.livery.dialog.toggle()</script>
  </binding>
 </key>
 
