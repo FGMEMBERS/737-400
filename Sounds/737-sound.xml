@@ -50,7 +50,7 @@
 
 <leftstartup>
       <name>leftenginestart</name>
-      <path>Aircraft/737-800/Sounds/turbine_start.wav</path>
+      <path>Aircraft/737-400/Sounds/turbine_start.wav</path>
       <mode>once</mode>
       <condition>
         <property>/controls/engines/engine[0]/starter</property>
@@ -62,7 +62,7 @@
 
     <rightstartup>
       <name>rightenginestart</name>
-      <path>Aircraft/737-300-CHT/Sounds/turbine_start.wav</path>
+      <path>Aircraft/737-400/Sounds/turbine_start.wav</path>
       <mode>once</mode>
       <condition>
         <property>/controls/engines/engine[1]/starter</property>
@@ -197,7 +197,7 @@
 
   <engine>
    <name>Left engine sound inside</name>
-   <path>Aircraft/737-400/737400.wav</path>
+   <path>Aircraft/737-400/Sounds/737400.wav</path>
    <mode>looped</mode>
    <condition>
    <and>
@@ -227,7 +227,7 @@
 
   <engine>
    <name>Right engine sound inside</name>
-   <path>Aircraft/737-400/737400.wav</path>
+   <path>Aircraft/737-400/Sounds/737400.wav</path>
    <mode>looped</mode>
    <condition>
    <and>
@@ -257,7 +257,7 @@
 
   <engine>
    <name>Left engine sound outside</name>
-   <path>Aircraft/737-400/737400.wav</path>
+   <path>Aircraft/737-400/Sounds/737400.wav</path>
    <mode>looped</mode>
    <condition>
      <and>
@@ -292,7 +292,7 @@
 
  <engine>
    <name>Right engine sound outside</name>
-   <path>Aircraft/737-400/737400.wav</path>
+   <path>Aircraft/737-400/Sounds/737400.wav</path>
    <mode>looped</mode>
    <condition>
      <and>
